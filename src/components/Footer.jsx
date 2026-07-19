@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="h-px bg-secondary/20 mb-8"></div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           {/* Copyright */}
           <p className="text-secondary text-xs text-center sm:text-left">
             © {currentYear} Yanès Hadiouche. All rights reserved.

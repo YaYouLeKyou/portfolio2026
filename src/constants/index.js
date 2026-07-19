@@ -25,7 +25,8 @@ import {
   threejs,
   ecommerce,
   reactmovies,
-  smartedu
+  smartedu,
+  findmyworkai
 } from "../assets";
 
 export const navLinks = [
@@ -191,6 +192,52 @@ const testimonials = [
 ];
 const projects = [
   {
+    name: "Find my work",
+    description:
+      "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "LLM",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scraping",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "AI",
+    image: findmyworkai,
+    source_code_link: "https://github.com/YaYouLeKyou",
+    web_link: "https://projectsportefolio.netlify.app/projects"
+  },
+  {
+    name: "Find my work",
+    description:
+      "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "LLM",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scraping",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Full-Stack",
+    image: findmyworkai,
+    source_code_link: "https://github.com/YaYouLeKyou",
+    web_link: "https://projectsportefolio.netlify.app/projects"
+  },
+  {
     name: "Ecommerce",
     description:
       "modern react e-commerce website using Next.js, with Sanity.io for content management and Stripe for secure payments. The site features a dynamic product catalog easy to maintain and scale.",
@@ -208,7 +255,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    category: "Full-Stack",
     image: ecommerce,
     source_code_link: "https://github.com/YaYouLeKyou/eco",
     web_link: "https://ecommerce-jsm.netlify.app/"
@@ -231,7 +278,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    category: "Full-Stack",
     image: reactmovies,
     source_code_link: "https://github.com/YaYouLeKyou/react-starter",
     web_link: "https://react-movies-app-by-yayou.netlify.app/"
@@ -300,10 +347,33 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "AI",
+    category: "Web",
     image: smartedu,
     source_code_link: "https://github.com/YaYouLeKyou/smartedu",
     web_link: "https://smarteduai.netlify.app/"
+  },
+  {
+    name: "My Universe",
+    description:
+      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "portfolio",
+        color: "green-text-gradient",
+      },
+      {
+        name: "showcase",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Web",
+    image: tripguide,
+    source_code_link: "https://github.com/YaYouLeKyou",
+    web_link: "https://projectsportefolio.netlify.app/projects"
   },
   {
     name: "My Universe",

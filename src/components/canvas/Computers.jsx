@@ -1,11 +1,21 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computerRef = useRef();
+  const baseY = isMobile ? -3 : -3.25;
+
+  useFrame(({ clock }, delta) => {
+    if (!computerRef.current) return;
+
+    const elapsed = clock.getElapsedTime();
+    computerRef.current.rotation.y += delta * 0.12;
+    computerRef.current.position.y = baseY + Math.sin(elapsed * 0.8) * 0.08;
+  });
 
   return (
     <group>
@@ -20,9 +30,10 @@ const Computers = ({ isMobile }) => {
       />
       <pointLight intensity={1} />
       <primitive
+        ref={computerRef}
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, baseY, -2.2] : [0, baseY, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </group>
@@ -59,15 +70,14 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{
-        preserveDrawingBuffer: true,
         antialias: true,
+        powerPreference: "high-performance",
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          enableRotate={true}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

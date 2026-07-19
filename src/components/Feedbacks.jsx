@@ -8,34 +8,45 @@ const offers = [
   {
     title: "Starter Website",
     details:
-      "A 3–5 page responsive website with a clean, modern design. Includes a homepage, about page, contact form, and gallery/portfolio section. Optimized for mobile and desktop, basic interactivity, and SEO-friendly structure.",
+      "A 3 pages responsive website with a clean, modern design. Includes a homepage, about page, contact form, and gallery/portfolio section. Optimized for mobile and desktop, basic interactivity, and SEO-friendly structure.",
     price: "€250",
+    subscription: "+€20/month",
+    subscriptionNote: "",
   },
   {
     title: "Pro Web Package",
     details:
-      "Up to 8 pages featuring dynamic content, optional API integrations or WordPress CMS. Includes blog setup, portfolio showcase, and SEO-ready structure. Perfect for growing businesses or professional portfolios.",
+      "Up to 5 pages featuring dynamic content, optional API integrations or WordPress CMS. Includes blog setup, portfolio showcase, and SEO-ready structure. Perfect for growing businesses or professional portfolios.",
     price: "€450",
+    subscription: "+€30/month",
+    subscriptionNote: "",
   },
   {
     title: "Full Web Experience",
     details:
       "A fully custom website or app with advanced interactivity. Includes e-commerce, payment setup, user authentication, and dashboards. Ideal for startups or online stores.",
-    price: "€750",
+    price: "€750+",
+    subscription: "+€50+/month",
+    subscriptionNote: "(Price to be determined based on\nthe size of the project)",
   },
+
 ];
 
-const OfferCard = ({ index, title, details, price, isMobile }) => {
+const OfferCard = ({ index, title, details, price, subscription, subscriptionNote, isMobile }) => {
   if (isMobile) {
     // ✅ Plain <div> on mobile (no motion, no shadows)
     return (
-      <div className="bg-tertiary p-4 rounded-xl w-full min-h-[320px] flex flex-col justify-between">
-        <div>
-          <h3 className="text-white text-lg font-bold mb-3">{title}</h3>
+      <div className="bg-tertiary p-5 rounded-xl w-full min-h-[280px] flex flex-col">
+        <div className="flex-1">
+          <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
           <p className="text-secondary text-sm leading-relaxed text-left">{details}</p>
         </div>
-        <div className="text-center mt-3">
+        <div className="text-center mt-4 h-[76px] flex flex-col items-center">
           <span className="text-white font-extrabold text-xl">{price}</span>
+          <p className="text-secondary text-xs mt-1">{subscription}</p>
+          <p className="text-secondary text-[10px] mt-0.5 leading-tight whitespace-pre-line min-h-[2.5rem]">
+            {subscriptionNote}
+          </p>
         </div>
       </div>
     );
@@ -45,21 +56,27 @@ const OfferCard = ({ index, title, details, price, isMobile }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.2, 0.6)}
-      className="bg-tertiary p-8 rounded-2xl w-[320px] min-h-[420px] shadow-lg flex flex-col justify-between"
+      className="bg-tertiary p-6 rounded-2xl w-[320px] h-[392px] shadow-lg flex flex-col"
+
+
     >
-      <div>
-        <h3 className="text-white text-2xl font-bold mb-6">{title}</h3>
-        <p className="text-secondary text-[14px] leading-relaxed text-justify">{details}</p>
+      <div className="flex-1">
+        <h3 className="text-white text-xl font-bold mb-4">{title}</h3>
+        <p className="text-secondary text-[13px] leading-relaxed text-left">{details}</p>
       </div>
-      <div className="text-center mt-4">
+      <div className="text-center mt-4 h-[88px] flex flex-col items-center">
         <span className="text-white font-extrabold text-3xl">{price}</span>
+        <p className="text-secondary text-sm mt-1 leading-tight">{subscription}</p>
+        <p className="text-secondary text-[10px] mt-0.5 leading-tight whitespace-pre-line min-h-[2.5rem]">
+          {subscriptionNote}
+        </p>
       </div>
     </motion.div>
   );
 };
 
 const Offers = () => {
-  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isMobile = useMediaQuery({ maxWidth: 749 });
 
   const HeaderWrapper = isMobile ? "div" : motion.div;
 
@@ -75,7 +92,7 @@ const Offers = () => {
 
       {/* Cards */}
       <div
-        className={`mt-8 pb-10 ${styles.paddingX} flex flex-col sm:flex-row gap-6 sm:gap-10 items-center sm:justify-center`}
+        className={`mt-8 pb-10 ${styles.paddingX} flex flex-col min-[750px]:flex-row gap-6 min-[750px]:gap-8 items-center min-[750px]:justify-center`}
       >
         {offers.map((offer, index) => (
           <OfferCard key={offer.title} index={index} {...offer} isMobile={isMobile} />

@@ -10,8 +10,8 @@ import { projects } from "../constants";
 
 const ProjectCard = memo(({ index, name, description, tags, image, source_code_link, web_link, isMobile }) => {
   const CardContent = () => (
-    <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full overflow-hidden h-full flex flex-col">
-      <div className={`relative w-full ${isMobile ? "h-[200px]" : "h-[230px]"} rounded-2xl overflow-hidden group`}>
+    <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full overflow-hidden h-[480px] flex flex-col">
+      <div className={`relative w-full ${isMobile ? "h-[200px]" : "h-[230px]"} rounded-2xl overflow-hidden group flex-shrink-0`}>
         <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
         
         {/* Overlay */}
@@ -50,12 +50,12 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
         </div>
       </div>
 
-      <div className="mt-4 sm:mt-5 flex-1 flex flex-col">
+      <div className="mt-4 sm:mt-5 flex-1 flex flex-col overflow-hidden">
         <h3 className={`text-white font-bold ${isMobile ? "text-[20px]" : "text-[24px]"}`}>{name}</h3>
-        <p className={`mt-2 text-secondary ${isMobile ? "text-[13px]" : "text-[14px]"} flex-1`}>{description}</p>
+        <p className={`mt-2 text-secondary ${isMobile ? "text-[13px]" : "text-[14px]"} flex-1 overflow-y-auto`}>{description}</p>
       </div>
 
-      <div className="mt-3 sm:mt-4 flex flex-wrap gap-2">
+      <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 flex-shrink-0">
         {tags.map((tag) => (
           <p key={`${name}-${tag.name}`} className={`text-[12px] sm:text-[14px] ${tag.color}`}>
             #{tag.name}
@@ -79,7 +79,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full sm:w-[360px]"
+      className="w-full sm:w-[360px] min-h-[420px]"
     >
       <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400}>
         <CardContent />
@@ -95,9 +95,9 @@ const Works = () => {
   // Get unique categories
   const categories = ["All", ...new Set(projects.map((p) => p.category || "Other"))];
 
-  // Filter projects
+  // Filter projects - use Set to avoid duplicates in "All" view
   const filteredProjects = activeFilter === "All"
-    ? projects
+    ? [...new Map(projects.map(p => [p.name, p])).values()]
     : projects.filter((p) => (p.category || "Other") === activeFilter);
 
   return (

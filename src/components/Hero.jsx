@@ -47,7 +47,7 @@ const Hero = () => {
               <h1 className={`${styles.heroHeadText} text-white`}>
                 AI-Powered <span className="text-[#915EFF]">Full-Stack</span> Developer
               </h1>
-              <p className={`${styles.heroSubText} mt-2 sm:mt-4 text-white-100`}>
+              <p className={`${styles.heroSubText} mt-2 sm:mt-4 text-[#915EFF] font-medium`}>
                 React + FastAPI + LLM Integration <br className="sm:block hidden" />
                 Web Scraping | Production Deployment
               </p>
@@ -73,14 +73,14 @@ const Hero = () => {
                 href="https://github.com/YaYouLeKyou"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-medium text-[#915EFF] border-2 border-[#915EFF] rounded-lg hover:bg-[#915EFF] hover:text-white transition-all duration-300 transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-medium text-white bg-tertiary border-2 border-[#915EFF] rounded-lg hover:bg-[#915EFF] transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <FaGithub className="mr-2" /> GitHub
               </a>
 
               <a
                 href="#contact"
-                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-medium text-secondary border border-secondary rounded-lg hover:text-white hover:border-white transition-all duration-300 transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-medium text-white bg-tertiary border-2 border-secondary rounded-lg hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 📧 Let's Talk
               </a>

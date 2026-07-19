@@ -11,7 +11,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import CanvasLoader from "./Loader";
 import FeaturedProject from "./FeaturedProject";
-
+import ServiceCards from "./ServiceCards";
 
 export {
   Hero,
@@ -29,5 +29,6 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
-  FeaturedProject
+  FeaturedProject,
+  ServiceCards
 };

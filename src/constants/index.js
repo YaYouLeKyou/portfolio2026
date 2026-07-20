@@ -26,7 +26,9 @@ import {
   ecommerce,
   reactmovies,
   smartedu,
-  findmyworkai
+  findmyworkai,
+  fcc,
+  yza
 } from "../assets";
 
 export const navLinks = [
@@ -397,6 +399,52 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/YaYouLeKyou",
     web_link: "https://projectsportefolio.netlify.app/projects"
+  },
+  {
+    name: "FCC",
+    description:
+      "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Web",
+    image: fcc,
+    source_code_link: "https://github.com/YaYouLeKyou/France-culture-connection2",
+    web_link: "https://francecultureconnection.netlify.app/"
+  },
+  {
+    name: "YZA Music",
+    description:
+      "A locomotive.js website for a music band featuring a custom music player, smooth scrolling animations, and immersive visual design. Showcases the band's music, videos, and artistic identity.",
+    tags: [
+      {
+        name: "locomotive.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "music-player",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Web",
+    image: yza,
+    source_code_link: "https://github.com/YaYouLeKyou/YZA-Music-website",
+    web_link: "https://yza.netlify.app/"
   },
 
 ];

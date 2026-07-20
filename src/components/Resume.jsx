@@ -95,16 +95,9 @@ const Resume = () => {
   const handleDownloadCV = () => {
     // Create a simple CV download link
     const cvLink = document.createElement("a");
-    cvLink.href = "/Yanes_Hadiouche_CV.pdf"; // Make sure this file exists in public folder
+    cvLink.href = "/cv.pdf"; // CV file in public folder
     cvLink.download = "Yanes_Hadiouche_CV.pdf";
     cvLink.click();
-    
-    // If file doesn't exist, show alert
-    setTimeout(() => {
-      if (!cvLink.href.includes("blob")) {
-        alert("CV file is being prepared. Please try again in a moment.");
-      }
-    }, 500);
   };
 
   return (
@@ -136,7 +129,7 @@ const Resume = () => {
           onClick={handleDownloadCV}
           className="px-8 py-4 bg-gradient-to-r from-[#915EFF] to-[#7c4dff] text-white rounded-lg font-bold flex items-center gap-2 shadow-lg hover:shadow-2xl transition-all duration-300"
         >
-          <FaDownload /> Download Full Resume (PDF)
+          <FaDownload /> Download my CV (PDF)
         </motion.button>
       </div>
 

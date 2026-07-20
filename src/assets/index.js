@@ -34,6 +34,8 @@ import ecommerce from "./ecommerce.png";
 import smartedu from "./smartedu.png";
 import findmyworkai from "./findMyWork.png";
 import websiteicon from "./websiteicon.png";
+import fcc from "./fcc.png";
+import yza from "./yza.png";
 
 export {
   logo,
@@ -69,4 +71,6 @@ export {
   smartedu,
   findmyworkai,
   websiteicon,
+  fcc,
+  yza,
 };

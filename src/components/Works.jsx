@@ -50,10 +50,10 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
         </div>
       </div>
 
-      <div className="mt-4 sm:mt-5 flex-1 flex flex-col overflow-hidden">
-        <h3 className={`text-white font-bold ${isMobile ? "text-[20px]" : "text-[24px]"}`}>{name}</h3>
-        <p className={`mt-2 text-secondary ${isMobile ? "text-[13px]" : "text-[14px]"} flex-1 overflow-y-auto`}>{description}</p>
-      </div>
+       <div className="mt-4 sm:mt-5 flex-1 flex flex-col">
+         <h3 className={`text-white font-bold ${isMobile ? "text-[20px]" : "text-[24px]"}`}>{name}</h3>
+         <p className={`mt-2 text-secondary ${isMobile ? "text-[13px]" : "text-[14px]"}`}>{description}</p>
+       </div>
 
       <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 flex-shrink-0">
         {tags.map((tag) => (

@@ -96,7 +96,7 @@ const Resume = () => {
     // Create a simple CV download link
     const cvLink = document.createElement("a");
     cvLink.href = "/cv.pdf"; // CV file in public folder
-    cvLink.download = "Yanes_Hadiouche_CV.pdf";
+    cvLink.download = "Hadiouche-AI-Engineer-&-Full-Stack-Developer.pdf";
     cvLink.click();
   };
 

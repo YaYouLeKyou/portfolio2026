@@ -12,8 +12,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
   const CardContent = () => (
     <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full overflow-hidden h-[480px] flex flex-col">
       <div className={`relative w-full ${isMobile ? "h-[200px]" : "h-[230px]"} rounded-2xl overflow-hidden group flex-shrink-0`}>
-        <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-        
+                
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100">
           <div

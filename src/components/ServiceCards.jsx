@@ -79,11 +79,11 @@ const StatCard = ({ number, label, index, isMobile, isTablet }) => {
   if (isMobile || isTablet) {
     return (
       <div className="w-full max-w-[260px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-        <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 flex justify-evenly items-center flex-col">
+        <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 h-[140px] flex justify-center items-center flex-col">
           <h3 className="text-4xl sm:text-5xl font-bold text-[#915EFF]">
             <CountUp end={number} duration={2} />
           </h3>
-          <p className="text-secondary mt-2 text-center">{label}</p>
+          <p className="text-secondary mt-2 text-center text-sm leading-tight line-clamp-2">{label}</p>
         </div>
       </div>
     );
@@ -98,7 +98,7 @@ const StatCard = ({ number, label, index, isMobile, isTablet }) => {
       viewport={{ once: true, amount: 0.2 }}
       className="w-[250px] sm:w-[220px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
     >
-      <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 flex justify-evenly items-center flex-col">
+      <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 h-[140px] flex justify-center items-center flex-col">
         <motion.h3
           className="text-4xl sm:text-5xl font-bold text-[#915EFF]"
           initial={{ scale: 0 }}
@@ -108,7 +108,7 @@ const StatCard = ({ number, label, index, isMobile, isTablet }) => {
         >
           <CountUp end={number} duration={2} />
         </motion.h3>
-        <p className="text-secondary mt-2 text-center">{label}</p>
+        <p className="text-secondary mt-2 text-center text-sm leading-tight line-clamp-2">{label}</p>
       </div>
     </motion.div>
   );
@@ -123,7 +123,7 @@ const ServiceCards = () => {
     { number: 4, label: t("serviceStats.llmProviders") },
     { number: 10, label: t("serviceStats.jobPlatforms") },
     { number: 2, label: t("serviceStats.agentsDeployed") },
-    { number: 7, label: t("serviceStats.languages") },
+    { number: 2, label: t("serviceStats.languages") },
   ];
 
   return (

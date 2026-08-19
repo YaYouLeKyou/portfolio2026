@@ -49,8 +49,8 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
         </div>
       </div>
 
-       <div className="mt-3 sm:mt-4 flex-1 flex flex-col">
-          <h3 className={`text-white font-bold ${isMobile ? "text-[16px]" : isTablet ? "text-[18px]" : "text-[22px]"}`}>{name}</h3>
+        <div className="mt-3 sm:mt-4 flex-1 flex flex-col">
+          <h3 className={`text-white font-bold ${isMobile ? "text-[16px]" : isTablet ? "text-[18px]" : "text-[22px]"} overflow-hidden`} style={{display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical"}}>{name}</h3>
           <p className={`mt-2 text-secondary ${isMobile ? "text-[11px]" : isTablet ? "text-[12px]" : "text-[13px]"} leading-[16px] sm:leading-[20px] overflow-hidden`} style={{display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical"}}>{description}</p>
         </div>
 
@@ -78,7 +78,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full sm:w-full md:w-[340px] lg:w-[360px] h-[460px]"
+      className="w-full sm:w-full md:w-[340px] lg:w-[360px] h-[480px]"
     >
       <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400}>
         <CardContent />

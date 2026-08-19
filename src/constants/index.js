@@ -133,7 +133,7 @@ const technologies = [
 const experiences = [
   {
     key: "frontend",
-    title: "Front-End Developer – React Projects",
+    title: "Full Stack Developer",
     company_name: "Eshop, Crypto app...",
     icon: starbucks,
     iconBg: "#383E56",
@@ -147,7 +147,7 @@ const experiences = [
   },
   {
     key: "web",
-    title: "Web Developer",
+    title: "Front-End Developer",
     company_name: "ABC Architecture, Demenagement Paris.com, France culture connection...",
     icon: tesla,
     iconBg: "#E6DEDD",

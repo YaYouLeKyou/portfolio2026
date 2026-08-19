@@ -5,29 +5,27 @@ import { useMediaQuery } from "react-responsive";
 import { styles } from "../styles";
 import { textVariant, fadeIn } from "../utils/motion";
 import { findmyworkai, github, websiteicon } from "../assets";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const FeaturedProject = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
+  const { t } = useLanguage();
 
   return (
     <section className="relative py-20">
-      {/* Section Header */}
       <div className="text-center mb-12">
-        <p className={styles.sectionSubText}>Featured Project</p>
-        <h2 className={styles.sectionHeadText}>Find my job AI</h2>
+        <p className={styles.sectionSubText}>{t("featuredProject.sectionSubText")}</p>
+        <h2 className={styles.sectionHeadText}>{t("featuredProject.title")}</h2>
       </div>
 
-      {/* Project Card - Large */}
       <div className="bg-tertiary p-6 sm:p-8 rounded-3xl max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Image */}
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-2xl overflow-hidden">
             <img 
               src={findmyworkai} 
               alt="Find my job AI" 
               className="w-full h-full object-cover"
             />
-            {/* Links */}
             <div className="absolute top-4 left-4 z-30">
               <a
                 href="https://github.com/YaYouLeKyou/find-my-job-ai-react"
@@ -50,49 +48,44 @@ const FeaturedProject = () => {
             </div>
           </div>
 
-          {/* Content */}
           <div>
             <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Intelligent Job Search Assistant
+              {t("featuredProject.subtitle")}
             </h3>
             <p className="text-secondary text-[15px] sm:text-[17px] leading-[28px] mb-6">
-              AI-powered application that revolutionizes job searching by analyzing CVs, ranking job offers 
-              across 10+ platforms, and generating personalized cover letters. Built with modern technologies 
-              and deployed in production.
+              {t("featuredProject.description")}
             </p>
 
-            {/* Key Features */}
             <div className="mb-6">
-              <h4 className="text-white font-bold text-xl mb-3">Key Features</h4>
+              <h4 className="text-white font-bold text-xl mb-3">{t("featuredProject.keyFeatures")}</h4>
               <ul className="space-y-2">
                 <li className="text-secondary text-[14px] sm:text-[15px] flex items-start">
                   <span className="text-[#915EFF] mr-2">▹</span>
-                  <span><strong className="text-white">Multi-LLM Orchestration:</strong> 4 providers (Groq, Gemini, Ollama, xAI) with automatic fallback</span>
+                  <span><strong className="text-white">{t("featuredProject.features.llm").split(":")[0]}:</strong> {t("featuredProject.features.llm").split(":").slice(1).join(":")}</span>
                 </li>
                 <li className="text-secondary text-[14px] sm:text-[15px] flex items-start">
                   <span className="text-[#915EFF] mr-2">▹</span>
-                  <span><strong className="text-white">Web Scraping:</strong> LinkedIn, Indeed, Glassdoor, France Travail with rate limiting</span>
+                  <span><strong className="text-white">{t("featuredProject.features.scraping").split(":")[0]}:</strong> {t("featuredProject.features.scraping").split(":").slice(1).join(":")}</span>
                 </li>
                 <li className="text-secondary text-[14px] sm:text-[15px] flex items-start">
                   <span className="text-[#915EFF] mr-2">▹</span>
-                  <span><strong className="text-white">AI-Powered Ranking:</strong> Intelligent job matching based on CV analysis</span>
+                  <span><strong className="text-white">{t("featuredProject.features.ranking").split(":")[0]}:</strong> {t("featuredProject.features.ranking").split(":").slice(1).join(":")}</span>
                 </li>
                 <li className="text-secondary text-[14px] sm:text-[15px] flex items-start">
                   <span className="text-[#915EFF] mr-2">▹</span>
-                  <span><strong className="text-white">Cover Letter Generation:</strong> Personalized letters for each job application</span>
+                  <span><strong className="text-white">{t("featuredProject.features.coverLetter").split(":")[0]}:</strong> {t("featuredProject.features.coverLetter").split(":").slice(1).join(":")}</span>
                 </li>
                 <li className="text-secondary text-[14px] sm:text-[15px] flex items-start">
                   <span className="text-[#915EFF] mr-2">▹</span>
-                  <span><strong className="text-white">Performance Optimization:</strong> Redis caching to reduce API costs</span>
+                  <span><strong className="text-white">{t("featuredProject.features.performance").split(":")[0]}:</strong> {t("featuredProject.features.performance").split(":").slice(1).join(":")}</span>
                 </li>
               </ul>
             </div>
 
-            {/* Tech Stack */}
             <div className="mb-6">
-              <h4 className="text-white font-bold text-xl mb-3">Tech Stack</h4>
+              <h4 className="text-white font-bold text-xl mb-3">{t("featuredProject.techStack")}</h4>
               <div className="flex flex-wrap gap-2">
-                {["React 19", "Vite", "FastAPI", "Python 3.11+", "Groq", "Google Gemini", "Ollama", "xAI/Grok", "Redis", "Docker", "Netlify", "Railway"].map((tech) => (
+                {t("featuredProject.techList").split(", ").map((tech) => (
                   <span key={tech} className="text-[12px] sm:text-[14px] text-[#915EFF] bg-[#915EFF]/10 px-3 py-1 rounded-full">
                     {tech}
                   </span>
@@ -100,7 +93,6 @@ const FeaturedProject = () => {
               </div>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <a
                 href="https://find-my-job-ai.netlify.app/"
@@ -108,7 +100,7 @@ const FeaturedProject = () => {
                 rel="noopener noreferrer"
                 className="bg-[#915EFF] hover:bg-[#7c4dff] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
               >
-                Live Demo
+                {t("featuredProject.liveDemo")}
               </a>
               <a
                 href="https://github.com/YaYouLeKyou/find-my-job-ai-react"
@@ -116,7 +108,7 @@ const FeaturedProject = () => {
                 rel="noopener noreferrer"
                 className="border border-[#915EFF] text-[#915EFF] hover:bg-[#915EFF] hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
               >
-                View Source
+                {t("featuredProject.viewSource")}
               </a>
             </div>
           </div>

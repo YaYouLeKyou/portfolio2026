@@ -36,6 +36,8 @@ import findmyworkai from "./findMyWork.png";
 import websiteicon from "./websiteicon.png";
 import fcc from "./fcc.png";
 import yza from "./yza.png";
+import iwatch4u from "./iwatch4u-logo.png";
+import histoiresSombres from "./Histoires-sombres-logo.png";
 
 export {
   logo,
@@ -73,4 +75,6 @@ export {
   websiteicon,
   fcc,
   yza,
+  iwatch4u,
+  histoiresSombres,
 };

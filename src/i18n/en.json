@@ -1,0 +1,274 @@
+{
+  "common": {
+    "name": "Yanès Hadiouche",
+    "role": "Web developer",
+    "all": "All",
+    "noProjects": "No projects in this category yet."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact",
+    "switchToLight": "Switch to Light Mode",
+    "switchToDark": "Switch to Dark Mode"
+  },
+  "hero": {
+    "headline": "AI-Powered <span class=\"text-[#915EFF]\">Full-Stack</span> Developer",
+    "subheadline": "React + FastAPI + LLM Integration\nWeb Scraping | Production Deployment",
+    "viewProjects": "View Projects",
+    "github": "GitHub",
+    "letsTalk": "Let's Talk",
+    "llmProviders": "10+ LLM Providers",
+    "projects": "50+ Projects"
+  },
+  "about": {
+    "sectionSubText": "Introduction",
+    "sectionHeadText": "About me",
+    "description": "AI-powered Full-Stack Developer specializing in LLM integration, web scraping, and production deployment. I build intelligent applications that solve real-world problems. My latest project, Find my job AI, orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance."
+  },
+  "experience": {
+    "sectionSubText": "What I have done so far",
+    "sectionHeadText": "Work Experience."
+  },
+  "works": {
+    "sectionSubText": "My work",
+    "sectionHeadText": "Projects.",
+    "intro": "Following projects showcase my skills and experience through real-world examples. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+    "categories": ["All", "AI", "Full-Stack", "Web"]
+  },
+  "contact": {
+    "sectionSubText": "Get in touch",
+    "sectionHeadText": "Contact Me",
+    "description": "Interested in AI-powered applications or need a developer who can integrate LLMs, build scraping systems, and deploy to production? Let's discuss your project!",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "viewProfile": "View Profile",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "tagline": "AI-Powered Full-Stack Developer",
+    "taglineSub": "Building intelligent applications that solve real-world problems",
+    "navigation": "Navigation",
+    "follow": "Follow",
+    "backToTop": "Back to Top",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "builtWith": "Built with React • Vite • Tailwind • Three.js"
+  },
+  "feedbacks": {
+    "sectionSubText": "My Services",
+    "sectionHeadText": "Web Development Offers.",
+    "starter": {
+      "name": "Starter Website",
+      "price": "€250",
+      "monthly": "+€20/month",
+      "description": "A 3 pages responsive website with a clean, modern design. Includes a homepage, about page, contact form, and gallery/portfolio section. Optimized for mobile and desktop, basic interactivity, and SEO-friendly structure."
+    },
+    "pro": {
+      "name": "Pro Web Package",
+      "price": "€450",
+      "monthly": "+€30/month",
+      "description": "Up to 5 pages featuring dynamic content, optional API integrations or WordPress CMS. Includes blog setup, portfolio showcase, and SEO-ready structure. Perfect for growing businesses or professional portfolios."
+    },
+    "full": {
+      "name": "Full Web Experience",
+      "price": "€750+",
+      "monthly": "+€50+/month",
+      "description": "A fully custom website or app with advanced interactivity. Includes e-commerce, payment setup, user authentication, and dashboards. Ideal for startups or online stores.",
+      "note": "(Price to be determined based on\nthe size of the project)"
+    }
+  },
+  "services": {
+    "aiLLM": "AI/LLM Integration",
+    "webScraping": "Web Scraping & APIs",
+    "fullStack": "Full-Stack Development",
+    "deployment": "Production Deployment"
+  },
+  "experienceData": {
+    "frontend": {
+      "title": "Front-End Developer – React Projects",
+      "company": "Freelance & Startups",
+      "period": "2022 - Today",
+      "points": [
+        "Developing and maintaining interactive web applications using React.js, Hooks, and modern JavaScript features.",
+        "Collaborating with UI/UX designers and backend teams to build user-focused, scalable features.",
+        "Implementing responsive layouts with CSS modules, Tailwind, and styled-components.",
+        "Participating in code reviews, version control with Git, and optimizing performance using React best practices."
+      ]
+    },
+    "web": {
+      "title": "Web Developer",
+      "company": "Various Agencies & Businesses",
+      "period": "2020 - 2022",
+      "points": [
+        "Building static and dynamic websites for businesses and organizations using HTML5, CSS3, and JavaScript.",
+        "Ensuring cross-browser compatibility and accessibility standards across devices.",
+        "Integrating third-party APIs (e.g., maps, contact forms, booking systems).",
+        "Providing ongoing maintenance, SEO improvements, and performance optimization."
+      ]
+    },
+    "wordpress": {
+      "title": "WordPress Developer",
+      "company": "Blog, websites, articles for company and institutions",
+      "period": "2018 - 2020",
+      "points": [
+        "Designing and customizing WordPress themes for SMEs, NGOs, and creative portfolios.",
+        "Implementing Elementor, WPBakery, and custom PHP templates for client-specific functionality.",
+        "Managing plugins, security updates, and user training for content management.",
+        "Optimizing site speed, mobile responsiveness, and integration with Google Analytics/SEO tools."
+      ]
+    },
+    "trainer": {
+      "title": "Trainer & AI in Education Expert",
+      "company": "Erasmus+: Smart Edu AI, hidden geniuses, fablab",
+      "period": "2022 - Present",
+      "points": [
+        "Designing and delivering hands-on training sessions on AI tools and digital pedagogy for educators and youth workers across Europe.",
+        "Creating interactive learning environments using platforms like ChatGPT, Eduaide.AI, Actionbound, Trello, and MagicSchool.",
+        "Teaching students how to build fully functional websites from the ground up using HTML, CSS, JavaScript, and responsive design principles.",
+        "Supporting participants in building real-world educational scenarios that integrate AI tools to enhance engagement, personalization, and assessment."
+      ]
+    }
+  },
+  "resume": {
+    "sectionSubText": "My Journey",
+    "sectionHeadText": "Resume & Skills",
+    "downloadCV": "Download my CV (PDF)",
+    "technicalSkills": "Technical Skills",
+    "skills": {
+      "react": "React & React Hooks",
+      "javascript": "JavaScript/TypeScript",
+      "python": "Python & FastAPI",
+      "llm": "LLM Integration (Groq, Gemini, Ollama)",
+      "scraping": "Web Scraping & APIs",
+      "tailwind": "Tailwind CSS & Responsive Design",
+      "database": "Database (MongoDB, Redis)",
+      "docker": "Docker & Deployment",
+      "git": "Git & Version Control",
+      "aiml": "AI/ML Concepts"
+    },
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "certifications": "Certifications & Achievements",
+    "certificationsList": {
+      "aiTrainer": "Certified AI Trainer (Erasmus+)",
+      "reactPatterns": "React Advanced Patterns",
+      "fastapi": "FastAPI Production Deployment",
+      "llmSpecialist": "LLM Integration Specialist",
+      "scrapingExpert": "Web Scraping Expert",
+      "performance": "Performance Optimization"
+    }
+  },
+  "featuredProject": {
+    "sectionSubText": "Featured Project",
+    "title": "Find my job AI",
+    "subtitle": "Intelligent Job Search Assistant",
+    "description": "AI-powered application that revolutionizes job searching by analyzing CVs, ranking job offers across 10+ platforms, and generating personalized cover letters. Built with modern technologies and deployed in production.",
+    "keyFeatures": "Key Features",
+    "features": {
+      "llm": "Multi-LLM Orchestration: 4 providers (Groq, Gemini, Ollama, xAI) with automatic fallback",
+      "scraping": "Web Scraping: LinkedIn, Indeed, Glassdoor, France Travail with rate limiting",
+      "ranking": "AI-Powered Ranking: Intelligent job matching based on CV analysis",
+      "coverLetter": "Cover Letter Generation: Personalized letters for each job application",
+      "performance": "Performance Optimization: Redis caching to reduce API costs"
+    },
+    "techStack": "Tech Stack",
+    "techList": "React 19, Vite, FastAPI, Python 3.11+, Groq, Google Gemini, Ollama, xAI/Grok, Redis, Docker, Netlify, Railway",
+    "liveDemo": "Live Demo",
+    "viewSource": "View Source"
+  },
+  "educationData": {
+    "advanced": {
+      "title": "Advanced Web Development & AI Integration",
+      "institution": "Self-taught & Online Courses (Udemy, Coursera)",
+      "period": "2023 - Present"
+    },
+    "diplomaWeb": {
+      "title": "Professional Diploma - Web Development",
+      "institution": "Coding School, France",
+      "period": "2020 - 2021"
+    },
+    "diplomaMarketing": {
+      "title": "Professional Diploma - Digital Marketing",
+      "institution": "France Education Institute",
+      "period": "2019 - 2020"
+    }
+  },
+  "serviceStats": {
+    "llmProviders": "LLM Providers Integrated",
+    "jobPlatforms": "Job Platforms Scraped",
+    "agentsDeployed": "Agents Deployed",
+    "languages": "Languages Integrated"
+  },
+  "projects": {
+    "job_bridge": "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
+    "iwatch4u": "Autonomous AI agent that monitors AI & Tech news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Twitter/X, Facebook, Instagram, and Threads.",
+    "bot_poster_tiktok": "Automated Python bot that generates complete TikTok videos about dark stories, true crime, and micro-mysteries. AI pipeline: script generation via Groq, Henri voice synthesis, Flux cinematic images, and vertical 1080x1920 video editing with Ken Burns effect.",
+    "ecommerce": "modern react e-commerce website using Next.js, with Sanity.io for content management and Stripe for secure payments. The site features a dynamic product catalog easy to maintain and scale.",
+    "react_movies": "React-Movie is a React app that uses a movie API to let users search for films and get personalized recommendations, providing a fast and interactive way to discover new movies.",
+    "demenagement_paris": "Website with an integrated volume calculator. Book your move with complete peace of mind.",
+    "abc_architecture": "A website designed to showcase an architecture firm's work with clarity and style. It features a clean layout, interactive project galleries, and a smooth navigation system.",
+    "smart_edu_ai": "Smart Edu AI is a blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence.",
+    "fcc": "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
+    "yza_music": "A locomotive.js website for a music band featuring a custom music player, smooth scrolling animations, and immersive visual design. Showcases the band's music, videos, and artistic identity.",
+    "my_universe": "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose."
+  },
+  "resumeExperience": {
+    "frontend": {
+      "title": "Front-End Developer – React Projects",
+      "company": "Freelance & Startups",
+      "year": "2022 - Present",
+      "points": [
+        "Developing and maintaining interactive web applications using React.js, Hooks, and modern JavaScript",
+        "Building AI-powered features with LLM integration (Groq, Gemini, Ollama, xAI)",
+        "Implementing responsive layouts with Tailwind CSS and styled-components",
+        "Optimizing performance using React best practices and code splitting"
+      ]
+    },
+    "web": {
+      "title": "Web Developer",
+      "company": "Various Agencies & Businesses",
+      "year": "2020 - 2022",
+      "points": [
+        "Building static and dynamic websites for businesses and organizations",
+        "Ensuring cross-browser compatibility and accessibility standards",
+        "Integrating third-party APIs (maps, booking systems, payments)",
+        "Providing ongoing maintenance, SEO improvements, and performance optimization"
+      ]
+    },
+    "trainer": {
+      "title": "Trainer & AI in Education Expert",
+      "company": "Erasmus+: Smart Edu AI",
+      "year": "2022 - Present",
+      "points": [
+        "Designing and delivering training sessions on AI tools and digital pedagogy",
+        "Creating interactive learning environments using ChatGPT, Actionbound, Trello",
+        "Teaching website development from HTML/CSS/JS to deployment",
+        "Supporting educational scenarios integrating AI tools for engagement"
+      ]
+    }
+  },
+  "resumeEducation": {
+    "advanced": {
+      "title": "Advanced Web Development & AI Integration",
+      "institution": "Self-taught & Online Courses (Udemy, Coursera)",
+      "period": "2023 - Present"
+    },
+    "diplomaWeb": {
+      "title": "Professional Diploma - Web Development",
+      "institution": "Coding School, France",
+      "period": "2020 - 2021"
+    },
+    "diplomaMarketing": {
+      "title": "Professional Diploma - Digital Marketing",
+      "institution": "France Education Institute",
+      "period": "2019 - 2020"
+    }
+  },
+  "cv": {
+    "download": "Download my CV (PDF)",
+    "languageLabel": "CV Language"
+  }
+}

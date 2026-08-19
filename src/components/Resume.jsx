@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const SkillBar = ({ name, percentage }) => (
   <div className="mb-4">
@@ -24,85 +25,63 @@ const SkillBar = ({ name, percentage }) => (
 
 const Resume = () => {
   const [showFullResume, setShowFullResume] = useState(false);
+  const { language, t } = useLanguage();
+  const [cvLang, setCvLang] = useState(language);
 
-  const skills = [
-    { name: "React & React Hooks", percentage: 95 },
-    { name: "JavaScript/TypeScript", percentage: 90 },
-    { name: "Python & FastAPI", percentage: 88 },
-    { name: "LLM Integration (Groq, Gemini, Ollama)", percentage: 92 },
-    { name: "Web Scraping & APIs", percentage: 85 },
-    { name: "Tailwind CSS & Responsive Design", percentage: 93 },
-    { name: "Database (MongoDB, Redis)", percentage: 80 },
-    { name: "Docker & Deployment", percentage: 82 },
-    { name: "Git & Version Control", percentage: 90 },
-    { name: "AI/ML Concepts", percentage: 85 },
-  ];
+  const handleDownloadCV = () => {
+    const cvFile = cvLang === "en" ? "/cv-yanes-hadiouche-en.pdf" : "/cv-yanes-hadiouche.pdf";
+    const cvName = cvLang === "en" ? "CV-Yanes-Hadiouche-AI-Engineer-Full-Stack-Developer-EN.pdf" : "CV-Yanes-Hadiouche-AI-Engineer-Full-Stack-Developer.pdf";
+    const link = document.createElement("a");
+    link.href = cvFile;
+    link.download = cvName;
+    link.click();
+  };
+
+  const handleCvLangChange = (lang) => {
+    setCvLang(lang);
+  };
+
+  const skillKeys = ["react", "javascript", "python", "llm", "scraping", "tailwind", "database", "docker", "git", "aiml"];
+
+  const skills = skillKeys.map((key) => ({
+    name: t(`resume.skills.${key}`),
+    percentage: [95, 90, 88, 92, 85, 93, 80, 82, 90, 85][skillKeys.indexOf(key)],
+  }));
 
   const experiences = [
     {
+      key: "frontend",
       year: "2022 - Present",
-      title: "Front-End Developer – React Projects",
-      company: "Freelance & Startups",
-      points: [
-        "Developing and maintaining interactive web applications using React.js, Hooks, and modern JavaScript",
-        "Building AI-powered features with LLM integration (Groq, Gemini, Ollama, xAI)",
-        "Implementing responsive layouts with Tailwind CSS and styled-components",
-        "Optimizing performance using React best practices and code splitting",
-      ],
     },
     {
+      key: "web",
       year: "2020 - 2022",
-      title: "Web Developer",
-      company: "Various Agencies & Businesses",
-      points: [
-        "Building static and dynamic websites for businesses and organizations",
-        "Ensuring cross-browser compatibility and accessibility standards",
-        "Integrating third-party APIs (maps, booking systems, payments)",
-        "Providing ongoing maintenance, SEO improvements, and performance optimization",
-      ],
     },
     {
+      key: "trainer",
       year: "2022 - Present",
-      title: "Trainer & AI in Education Expert",
-      company: "Erasmus+: Smart Edu AI",
-      points: [
-        "Designing and delivering training sessions on AI tools and digital pedagogy",
-        "Creating interactive learning environments using ChatGPT, Actionbound, Trello",
-        "Teaching website development from HTML/CSS/JS to deployment",
-        "Supporting educational scenarios integrating AI tools for engagement",
-      ],
     },
   ];
 
   const education = [
     {
-      year: "2022",
-      title: "Advanced Web Development & AI Integration",
-      institution: "Self-taught & Online Courses (Udemy, Coursera)",
+      key: "advanced",
+      year: "2023 - Present",
     },
     {
-      year: "2020",
-      title: "Professional Diploma - Web Development",
-      institution: "Coding School, France",
+      key: "diplomaWeb",
+      year: "2020 - 2021",
     },
     {
-      year: "2018",
-      title: "Professional Diploma - Digital Marketing",
-      institution: "France Education Institute",
+      key: "diplomaMarketing",
+      year: "2019 - 2020",
     },
   ];
 
-  const handleDownloadCV = () => {
-    // Create a simple CV download link
-    const cvLink = document.createElement("a");
-    cvLink.href = "/cv.pdf"; // CV file in public folder
-    cvLink.download = "Hadiouche-AI-Engineer-&-Full-Stack-Developer.pdf";
-    cvLink.click();
-  };
+  const certificationKeys = ["aiTrainer", "reactPatterns", "fastapi", "llmSpecialist", "scrapingExpert", "performance"];
 
   return (
     <div className="py-20">
-      {/* Header */}
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 20 },
@@ -117,24 +96,44 @@ const Resume = () => {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className={styles.sectionSubText}>My Journey</p>
-        <h2 className={styles.sectionHeadText}>Resume & Skills</h2>
+        <p className={styles.sectionSubText}>{t("resume.sectionSubText")}</p>
+        <h2 className={styles.sectionHeadText}>{t("resume.sectionHeadText")}</h2>
       </motion.div>
 
-      {/* CV Download Button */}
-      <div className="flex justify-center mb-12">
+      <div className="flex flex-col items-center gap-3 mb-12">
+        <p className="text-secondary text-sm">{t("cv.languageLabel")}</p>
+        {/* Language Selector */}
+        <div className="flex items-center gap-2 bg-tertiary rounded-lg p-1 border border-secondary/20">
+          <button
+            onClick={() => handleCvLangChange("fr")}
+            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-300 ${
+              cvLang === "fr" ? "bg-[#915EFF] text-white shadow-lg" : "text-secondary hover:text-white"
+            }`}
+          >
+            Français
+          </button>
+          <button
+            onClick={() => handleCvLangChange("en")}
+            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-300 ${
+              cvLang === "en" ? "bg-[#915EFF] text-white shadow-lg" : "text-secondary hover:text-white"
+            }`}
+          >
+            English
+          </button>
+        </div>
+
+        {/* Download Button */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleDownloadCV}
-          className="px-8 py-4 bg-gradient-to-r from-[#915EFF] to-[#7c4dff] text-white rounded-lg font-bold flex items-center gap-2 shadow-lg hover:shadow-2xl transition-all duration-300"
+          className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#915EFF] to-[#7c4dff] text-white rounded-lg font-bold flex items-center gap-2 shadow-lg hover:shadow-2xl transition-all duration-300"
         >
-          <FaDownload /> Download my CV (PDF)
+          <FaDownload /> {t("resume.downloadCV")}
         </motion.button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto px-6">
-        {/* Skills */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -142,9 +141,9 @@ const Resume = () => {
           viewport={{ once: true }}
           className="lg:col-span-1"
         >
-          <div className="bg-tertiary p-6 sm:p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <span className="text-[#915EFF]">⚙️</span> Technical Skills
+          <div className="bg-tertiary p-5 sm:p-8 rounded-2xl">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="text-[#915EFF]">⚙️</span> {t("resume.technicalSkills")}
             </h3>
             {skills.map((skill, idx) => (
               <div key={idx}>
@@ -154,7 +153,6 @@ const Resume = () => {
           </div>
         </motion.div>
 
-        {/* Experience & Education */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -162,33 +160,32 @@ const Resume = () => {
           viewport={{ once: true }}
           className="lg:col-span-2"
         >
-          {/* Work Experience */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <span className="text-[#915EFF]">💼</span> Work Experience
+          <div className="mb-10 sm:mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="text-[#915EFF]">💼</span> {t("resume.workExperience")}
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {experiences.map((exp, idx) => (
                 <motion.div
-                  key={idx}
+                  key={exp.key}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="bg-tertiary p-6 rounded-xl border-l-4 border-[#915EFF]"
+                  className="bg-tertiary p-4 sm:p-6 rounded-xl border-l-4 border-[#915EFF]"
                 >
-                  <div className="flex justify-between items-start mb-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1 sm:gap-0">
                     <div>
-                      <h4 className="text-white font-bold text-lg">{exp.title}</h4>
-                      <p className="text-secondary text-sm">{exp.company}</p>
+                      <h4 className="text-white font-bold text-base sm:text-lg">{t(`resumeExperience.${exp.key}.title`)}</h4>
+                      <p className="text-secondary text-xs sm:text-sm">{t(`resumeExperience.${exp.key}.company`)}</p>
                     </div>
-                    <span className="text-[#915EFF] font-bold text-sm whitespace-nowrap ml-4">
-                      {exp.year}
+                    <span className="text-[#915EFF] font-bold text-xs sm:text-sm whitespace-nowrap">
+                      {t(`resumeExperience.${exp.key}.year`)}
                     </span>
                   </div>
-                  <ul className="mt-3 space-y-2">
-                    {exp.points.map((point, pidx) => (
-                      <li key={pidx} className="text-secondary text-sm flex items-start gap-2">
+                  <ul className="mt-2 sm:mt-3 space-y-1 sm:space-y-2">
+                    {t(`resumeExperience.${exp.key}.points`).map((point, pidx) => (
+                      <li key={pidx} className="text-secondary text-xs sm:text-sm flex items-start gap-2">
                         <span className="text-[#915EFF] mt-1">▹</span>
                         <span>{point}</span>
                       </li>
@@ -199,27 +196,26 @@ const Resume = () => {
             </div>
           </div>
 
-          {/* Education */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <span className="text-[#915EFF]">🎓</span> Education
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+              <span className="text-[#915EFF]">🎓</span> {t("resume.education")}
             </h3>
-            <div className="space-y-4">
+             <div className="space-y-3 sm:space-y-4">
               {education.map((edu, idx) => (
                 <motion.div
-                  key={idx}
+                  key={edu.key}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
                   className="bg-tertiary p-4 rounded-lg border-l-4 border-green-500"
                 >
-                  <div className="flex justify-between items-start">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                     <div>
-                      <h4 className="text-white font-bold">{edu.title}</h4>
-                      <p className="text-secondary text-sm">{edu.institution}</p>
+                      <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.${edu.key}.title`)}</h4>
+                      <p className="text-secondary text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.institution`)}</p>
                     </div>
-                    <span className="text-green-500 font-bold text-sm">{edu.year}</span>
+                    <span className="text-green-500 font-bold text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.period`)}</span>
                   </div>
                 </motion.div>
               ))}
@@ -228,33 +224,25 @@ const Resume = () => {
         </motion.div>
       </div>
 
-      {/* Certifications */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mt-16 max-w-6xl mx-auto px-6"
+        className="mt-12 sm:mt-16 max-w-6xl mx-auto px-4 sm:px-6"
       >
-        <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-          <span className="text-[#915EFF]">🏆</span> Certifications & Achievements
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
+          <span className="text-[#915EFF]">🏆</span> {t("resume.certifications")}
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            "Certified AI Trainer (Erasmus+)",
-            "React Advanced Patterns",
-            "FastAPI Production Deployment",
-            "LLM Integration Specialist",
-            "Web Scraping Expert",
-            "Performance Optimization",
-          ].map((cert, idx) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          {certificationKeys.map((key, idx) => (
             <motion.div
-              key={idx}
+              key={key}
               whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-[#915EFF]/10 to-[#7c4dff]/10 p-4 rounded-lg border border-[#915EFF]/30 flex items-center gap-3"
+              className="bg-gradient-to-r from-[#915EFF]/10 to-[#7c4dff]/10 p-3 sm:p-4 rounded-lg border border-[#915EFF]/30 flex items-center gap-2 sm:gap-3"
             >
-              <span className="text-2xl">✓</span>
-              <span className="text-white font-medium">{cert}</span>
+              <span className="text-xl sm:text-2xl">✓</span>
+              <span className="text-white font-medium text-sm sm:text-base">{t(`resume.certificationsList.${key}`)}</span>
             </motion.div>
           ))}
         </div>

@@ -28,7 +28,9 @@ import {
   smartedu,
   findmyworkai,
   fcc,
-  yza
+  yza,
+  iwatch4u,
+  histoiresSombres
 } from "../assets";
 
 export const navLinks = [
@@ -48,18 +50,22 @@ export const navLinks = [
 
 const services = [
   {
+    key: "aiLLM",
     title: "AI/LLM Integration",
     icon: backend,
   },
   {
+    key: "webScraping",
     title: "Web Scraping & APIs",
     icon: web,
   },
   {
+    key: "fullStack",
     title: "Full-Stack Development",
     icon: mobile,
   },
   {
+    key: "deployment",
     title: "Production Deployment",
     icon: creator,
   },
@@ -126,6 +132,7 @@ const technologies = [
 
 const experiences = [
   {
+    key: "frontend",
     title: "Front-End Developer – React Projects",
     company_name: "Eshop, Crypto app...",
     icon: starbucks,
@@ -139,6 +146,7 @@ const experiences = [
     ],
   },
   {
+    key: "web",
     title: "Web Developer",
     company_name: "ABC Architecture, Demenagement Paris.com, France culture connection...",
     icon: tesla,
@@ -152,6 +160,7 @@ const experiences = [
     ],
   },
   {
+    key: "wordpress",
     title: "WordPress Developer",
     company_name: "Blog, websites, articles for company and institutions",
     icon: shopify,
@@ -161,9 +170,11 @@ const experiences = [
       "Designing and customizing WordPress themes for SMEs, NGOs, and creative portfolios.",
       "Implementing Elementor, WPBakery, and custom PHP templates for client-specific functionality.",
       "Managing plugins, security updates, and user training for content management.",
-      "Optimizing site speed, mobile responsiveness, and integration with Google Analytics/SEO tools.",]
+      "Optimizing site speed, mobile responsiveness, and integration with Google Analytics/SEO tools.",
+    ],
   },
   {
+    key: "trainer",
     title: "Trainer & AI in Education Expert",
     company_name: "Erasmus+: Smart Edu AI, hidden geniuses, fablab",
     icon: meta,
@@ -180,21 +191,24 @@ const experiences = [
 
 const testimonials = [
   {
+    key: "starter",
     testimonial:
       "Starter Website – €250\n\nResponsive 3–5 page website with clean, modern design, mobile-friendly layout, and basic interactivity. Ideal for personal projects or small businesses.",
   },
   {
+    key: "pro",
     testimonial:
       "Pro Web Package – €450\n\nUp to 8 pages with dynamic content, animations, and integration with APIs or WordPress. Perfect for portfolios, blogs, or small business websites.",
   },
   {
+    key: "full",
     testimonial:
       "Full Web Experience – €750+\n\nCustom website or web app with advanced interactivity, responsive design, SEO basics, and optional e-commerce functionality. Designed for startups or professional projects.",
   },
 ];
 const projects = [
   {
-    name: "Find my work",
+    name: "Job Bridge",
     description:
       "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
     tags: [
@@ -213,11 +227,57 @@ const projects = [
     ],
     category: "AI",
     image: findmyworkai,
-    source_code_link: "https://github.com/YaYouLeKyou",
-    web_link: "https://projectsportefolio.netlify.app/projects"
+    source_code_link: "https://github.com/YaYouLeKyou/find-my-job-ai-react",
+    web_link: "https://find-my-job-ai-react.vercel.app/"
   },
   {
-    name: "Find my work",
+    name: "Iwatch4u",
+    description:
+      "Autonomous AI agent that monitors AI & Tech news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Twitter/X, Facebook, Instagram, and Threads.",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "AI",
+    image: iwatch4u,
+    source_code_link: "https://github.com/YaYouLeKyou/ia-tech-bot-poster-fb-insta-thread-twitter",
+    web_link: "https://www.facebook.com/profile.php?id=100068745384249"
+  },
+  {
+    name: "Bot Poster TikTok - Histoires Sombres",
+    description:
+      "Automated Python bot that generates complete TikTok videos about dark stories, true crime, and micro-mysteries. AI pipeline: script generation via Groq, Henri voice synthesis, Flux cinematic images, and vertical 1080x1920 video editing with Ken Burns effect.",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "AI",
+    image: histoiresSombres,
+    source_code_link: "https://github.com/YaYouLeKyou/bot-poster-tiktok-mystery",
+    web_link: "https://github.com/YaYouLeKyou/bot-poster-tiktok-mystery"
+  },
+  {
+    name: "Job Bridge",
     description:
       "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
     tags: [
@@ -236,8 +296,8 @@ const projects = [
     ],
     category: "Full-Stack",
     image: findmyworkai,
-    source_code_link: "https://github.com/YaYouLeKyou",
-    web_link: "https://projectsportefolio.netlify.app/projects"
+    source_code_link: "https://github.com/YaYouLeKyou/find-my-job-ai-react",
+    web_link: "https://find-my-job-ai-react.vercel.app/"
   },
   {
     name: "Ecommerce",
@@ -259,7 +319,7 @@ const projects = [
     ],
     category: "Full-Stack",
     image: ecommerce,
-    source_code_link: "https://github.com/YaYouLeKyou/eco",
+    source_code_link: "https://github.com/YaYouLeKyou/e-commerce-custom-open-source",
     web_link: "https://ecommerce-jsm.netlify.app/"
   },
   {
@@ -355,52 +415,6 @@ const projects = [
     web_link: "https://smarteduai.netlify.app/"
   },
   {
-    name: "My Universe",
-    description:
-      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "portfolio",
-        color: "green-text-gradient",
-      },
-      {
-        name: "showcase",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Web",
-    image: tripguide,
-    source_code_link: "https://github.com/YaYouLeKyou",
-    web_link: "https://projectsportefolio.netlify.app/projects"
-  },
-  {
-    name: "My Universe",
-    description:
-      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "portfolio",
-        color: "green-text-gradient",
-      },
-      {
-        name: "showcase",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: tripguide,
-    source_code_link: "https://github.com/YaYouLeKyou",
-    web_link: "https://projectsportefolio.netlify.app/projects"
-  },
-  {
     name: "FCC",
     description:
       "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
@@ -445,6 +459,52 @@ const projects = [
     image: yza,
     source_code_link: "https://github.com/YaYouLeKyou/YZA-Music-website",
     web_link: "https://yza.netlify.app/"
+  },
+  {
+    name: "My Universe",
+    description:
+      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "portfolio",
+        color: "green-text-gradient",
+      },
+      {
+        name: "showcase",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Web",
+    image: tripguide,
+    source_code_link: "https://github.com/YaYouLeKyou",
+    web_link: "https://projectsportefolio.netlify.app/projects"
+  },
+  {
+    name: "My Universe",
+    description:
+      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "portfolio",
+        color: "green-text-gradient",
+      },
+      {
+        name: "showcase",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "Full-Stack",
+    image: tripguide,
+    source_code_link: "https://github.com/YaYouLeKyou",
+    web_link: "https://projectsportefolio.netlify.app/projects"
   },
 
 ];

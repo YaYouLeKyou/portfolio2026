@@ -1,0 +1,274 @@
+{
+  "common": {
+    "name": "Yanès Hadiouche",
+    "role": "Développeur web",
+    "all": "Tous",
+    "noProjects": "Aucun projet dans cette catégorie pour l'instant."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Projets",
+    "contact": "Contact",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre"
+  },
+  "hero": {
+    "headline": "Développeur <span class=\"text-[#915EFF]\">Full-Stack</span> propulsé par l'IA",
+    "subheadline": "React + FastAPI + Intégration LLM\nWeb Scraping | Déploiement en production",
+    "viewProjects": "Voir les projets",
+    "github": "GitHub",
+    "letsTalk": "Discutons",
+    "llmProviders": "10+ Fournisseurs LLM",
+    "projects": "50+ Projets"
+  },
+  "about": {
+    "sectionSubText": "Introduction",
+    "sectionHeadText": "À propos de moi",
+    "description": "Développeur Full-Stack spécialisé dans l'intégration LLM, le web scraping et le déploiement en production. Je conçois des applications intelligentes qui résolvent des problèmes concrets. Mon dernier projet, Find my job AI, orchestre 4 fournisseurs de LLM (Groq, Gemini, Ollama, xAI) avec un système de fallback automatique, scrape des offres d'emploi sur LinkedIn/Indeed/Glassdoor/France Travail et utilise un cache Redis pour des performances optimales."
+  },
+  "experience": {
+    "sectionSubText": "Ce que j'ai accompli jusqu'à présent",
+    "sectionHeadText": "Expérience professionnelle."
+  },
+  "works": {
+    "sectionSubText": "Mes réalisations",
+    "sectionHeadText": "Projets.",
+    "intro": "Ces projets illustrent mes compétences et mon expérience à travers des exemples concrets. Chaque projet est brièvement décrit avec des liens vers les dépôts de code et les démos en ligne. Cela reflète ma capacité à résoudre des problèmes complexes, à travailler avec différentes technologies et à gérer des projets efficacement.",
+    "categories": ["Tous", "IA", "Full-Stack", "Web"]
+  },
+  "contact": {
+    "sectionSubText": "Entrons en contact",
+    "sectionHeadText": "Contactez-moi",
+    "description": "Vous êtes intéressé par des applications propulsées par l'IA ou vous avez besoin d'un développeur capable d'intégrer des LLM, de construire des systèmes de scraping et de déployer en production ? Discutons de votre projet !",
+    "email": "Email",
+    "phone": "Téléphone",
+    "linkedin": "LinkedIn",
+    "viewProfile": "Voir le profil",
+    "copied": "Copié !"
+  },
+  "footer": {
+    "tagline": "Développeur Full-Stack propulsé par l'IA",
+    "taglineSub": "Je construis des applications intelligentes qui résolvent des problèmes concrets",
+    "navigation": "Navigation",
+    "follow": "Suivre",
+    "backToTop": "Retour en haut",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "builtWith": "Construit avec React • Vite • Tailwind • Three.js"
+  },
+  "feedbacks": {
+    "sectionSubText": "Mes Services",
+    "sectionHeadText": "Offres de développement web.",
+    "starter": {
+      "name": "Site web Débutant",
+      "price": "€250",
+      "monthly": "+€20/mois",
+      "description": "Un site responsive de 3 pages avec un design propre et moderne. Comprend une page d'accueil, une page à propos, un formulaire de contact et une section galerie/portfolio. Optimisé pour mobile et desktop, avec une interactivité basique et une structure SEO-friendly."
+    },
+    "pro": {
+      "name": "Pack Pro Web",
+      "price": "€450",
+      "monthly": "+€30/mois",
+      "description": "Jusqu'à 5 pages avec contenu dynamique, intégrations API optionnelles ou CMS WordPress. Comprend la configuration d'un blog, un portfolio et une structure prête pour le SEO. Parfait pour les entreprises en croissance ou les portfolios professionnels."
+    },
+    "full": {
+      "name": "Expérience Web Complète",
+      "price": "€750+",
+      "monthly": "+€50+/mois",
+      "description": "Un site web ou une application entièrement personnalisé avec une interactivité avancée. Comprend e-commerce, paiement, authentification utilisateur et tableaux de bord. Idéal pour les startups ou les boutiques en ligne.",
+      "note": "(Prix à déterminer selon\nla taille du projet)"
+    }
+  },
+  "services": {
+    "aiLLM": "Intégration IA/LLM",
+    "webScraping": "Web Scraping & APIs",
+    "fullStack": "Développement Full-Stack",
+    "deployment": "Déploiement en production"
+  },
+  "experienceData": {
+    "frontend": {
+      "title": "Développeur Front-End – Projets React",
+      "company": "Freelance & Startups",
+      "period": "2022 - Aujourd'hui",
+      "points": [
+        "Développement et maintenance d'applications web interactives avec React.js, Hooks et les fonctionnalités modernes de JavaScript.",
+        "Collaboration avec les équipes UI/UX et backend pour créer des fonctionnalités centrées utilisateur et évolutives.",
+        "Mise en place de mises en page responsives avec CSS modules, Tailwind et styled-components.",
+        "Participation aux revues de code, gestion de version avec Git et optimisation des performances selon les bonnes pratiques React."
+      ]
+    },
+    "web": {
+      "title": "Développeur Web",
+      "company": "Agences & Entreprises diverses",
+      "period": "2020 - 2022",
+      "points": [
+        "Création de sites statiques et dynamiques pour des entreprises et organisations avec HTML5, CSS3 et JavaScript.",
+        "Garantie de la compatibilité inter-navigateurs et du respect des normes d'accessibilité sur tous les appareils.",
+        "Intégration d'API tierces (cartes, formulaires de contact, systèmes de réservation).",
+        "Maintenance continue, améliorations SEO et optimisation des performances."
+      ]
+    },
+    "wordpress": {
+      "title": "Développeur WordPress",
+      "company": "Blogs, sites web, articles pour entreprises et institutions",
+      "period": "2018 - 2020",
+      "points": [
+        "Conception et personnalisation de thèmes WordPress pour PME, ONG et portfolios créatifs.",
+        "Mise en place d'Elementor, WPBakery et templates PHP personnalisés pour des fonctionnalités spécifiques.",
+        "Gestion des plugins, mises à jour de sécurité et formation des utilisateurs à la gestion de contenu.",
+        "Optimisation de la vitesse, de la responsivité mobile et de l'intégration avec Google Analytics/outils SEO."
+      ]
+    },
+    "trainer": {
+      "title": "Formateur & Expert IA dans l'Éducation",
+      "company": "Erasmus+: Smart Edu AI, hidden geniuses, fablab",
+      "period": "2022 - Présent",
+      "points": [
+        "Conception et animation de sessions de formation pratiques sur les outils IA et la pédagogie numérique pour des éducateurs et travailleurs jeunesse à travers l'Europe.",
+        "Création d'environnements d'apprentissage interactifs avec ChatGPT, Eduaide.AI, Actionbound, Trello et MagicSchool.",
+        "Enseignement de la création de sites web fonctionnels de A à Z avec HTML, CSS, JavaScript et les principes de design responsive.",
+        "Accompagnement des participants dans la création de scénarios pédagogiques concrets intégrant des outils IA pour améliorer l'engagement, la personnalisation et l'évaluation."
+      ]
+    }
+  },
+  "resume": {
+    "sectionSubText": "Mon parcours",
+    "sectionHeadText": "CV & Compétences",
+    "downloadCV": "Télécharger mon CV (PDF)",
+    "technicalSkills": "Compétences techniques",
+    "skills": {
+      "react": "React & React Hooks",
+      "javascript": "JavaScript/TypeScript",
+      "python": "Python & FastAPI",
+      "llm": "Intégration LLM (Groq, Gemini, Ollama)",
+      "scraping": "Web Scraping & APIs",
+      "tailwind": "Tailwind CSS & Design Responsive",
+      "database": "Bases de données (MongoDB, Redis)",
+      "docker": "Docker & Déploiement",
+      "git": "Git & Gestion de version",
+      "aiml": "Concepts IA/ML"
+    },
+    "workExperience": "Expérience professionnelle",
+    "education": "Formation",
+    "certifications": "Certifications & Réalisations",
+    "certificationsList": {
+      "aiTrainer": "Formateur IA certifié (Erasmus+)",
+      "reactPatterns": "Motifs avancés React",
+      "fastapi": "Déploiement FastAPI en production",
+      "llmSpecialist": "Spécialiste intégration LLM",
+      "scrapingExpert": "Expert Web Scraping",
+      "performance": "Optimisation des performances"
+    }
+  },
+  "featuredProject": {
+    "sectionSubText": "Projet vedette",
+    "title": "Find my job AI",
+    "subtitle": "Assistant intelligent de recherche d'emploi",
+    "description": "Application propulsée par l'IA qui révolutionne la recherche d'emploi en analysant les CV, en classant les offres sur plus de 10 plateformes et en générant des lettres de motivation personnalisées. Construite avec des technologies modernes et déployée en production.",
+    "keyFeatures": "Fonctionnalités clés",
+    "features": {
+      "llm": "Orchestration multi-LLM : 4 fournisseurs (Groq, Gemini, Ollama, xAI) avec fallback automatique",
+      "scraping": "Web Scraping : LinkedIn, Indeed, Glassdoor, France Travail avec limitation de débit",
+      "ranking": "Classement IA : Correspondance intelligente des offres basée sur l'analyse du CV",
+      "coverLetter": "Génération de lettres de motivation : Lettres personnalisées pour chaque candidature",
+      "performance": "Optimisation des performances : Cache Redis pour réduire les coûts API"
+    },
+    "techStack": "Stack technique",
+    "techList": "React 19, Vite, FastAPI, Python 3.11+, Groq, Google Gemini, Ollama, xAI/Grok, Redis, Docker, Netlify, Railway",
+    "liveDemo": "Démo en ligne",
+    "viewSource": "Voir le code source"
+  },
+  "educationData": {
+    "advanced": {
+      "title": "Développement Web Avancé & Intégration IA",
+      "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
+      "period": "2023 - Présent"
+    },
+    "diplomaWeb": {
+      "title": "Diplôme professionnel - Développement Web",
+      "institution": "École de code, France",
+      "period": "2020 - 2021"
+    },
+    "diplomaMarketing": {
+      "title": "Diplôme professionnel - Marketing Digital",
+      "institution": "France Education Institute",
+      "period": "2019 - 2020"
+    }
+  },
+  "serviceStats": {
+    "llmProviders": "Fournisseurs LLM intégrés",
+    "jobPlatforms": "Plateformes d'emploi scrapées",
+    "agentsDeployed": "Agents déployés",
+    "languages": "Langues intégrées"
+  },
+  "projects": {
+    "job_bridge": "Application de recherche d'emploi propulsée par l'IA qui orchestre 4 fournisseurs de LLM (Groq, Gemini, Ollama, xAI) avec un système de fallback automatique, scrape des offres d'emploi sur LinkedIn/Indeed/Glassdoor/France Travail et utilise un cache Redis pour des performances optimales.",
+    "iwatch4u": "Agent IA autonome qui surveille l'actualité IA & Tech via des flux RSS, génère des publications optimisées par DeepSeek/OpenAI et les publie automatiquement sur Twitter/X, Facebook, Instagram et Threads.",
+    "bot_poster_tiktok": "Bot Python automatisé qui génère des vidéos TikTok complètes sur des histoires sombres, faits divers et micro-mystères. Pipeline IA : génération de script via Groq, synthèse vocale Henri, images cinématiques Flux et montage vidéo vertical 1080x1920 avec effet Ken Burns.",
+    "ecommerce": "Site e-commerce moderne utilisant Next.js, avec Sanity.io pour la gestion de contenu et Stripe pour les paiements sécurisés. Le site dispose d'un catalogue de produits dynamique facile à maintenir et à faire évoluer.",
+    "react_movies": "React-Movie est une application React qui utilise une API de films pour permettre aux utilisateurs de rechercher des films et d'obtenir des recommandations personnalisées, offrant un moyen rapide et interactif de découvrir de nouveaux films.",
+    "demenagement_paris": "Site web avec un calculateur de volume intégré. Réservez votre déménagement en toute sérénité.",
+    "abc_architecture": "Un site web conçu pour présenter les réalisations d'un cabinet d'architecture avec clarté et style. Il présente une mise en page épurée, des galeries de projets interactives et un système de navigation fluide.",
+    "smart_edu_ai": "Smart Edu AI est un blog et une plateforme éducative où j'ai servi d'expert IA, partageant des idées et des stratégies sur la transformation de l'éducation par l'intelligence artificielle.",
+    "fcc": "Site web classique pour une ONG dédiée aux échanges culturels et à l'éducation. Il présente un design responsive, un support multilingue et présente des programmes et initiatives culturels.",
+    "yza_music": "Un site web locomotive.js pour un groupe de musique avec un lecteur de musique personnalisé, des animations de défilement fluides et un design visuel immersif. Présente la musique, les vidéos et l'identité artistique du groupe.",
+    "my_universe": "Explorez un mélange de mes projets précédents — allant de sites web professionnels élégants à des applications créatives et des plateformes éducatives améliorées par l'IA. Chacun reflète un mélange unique de design, de fonctionnalité et de finalité."
+  },
+  "resumeExperience": {
+    "frontend": {
+      "title": "Développeur Front-End – Projets React",
+      "company": "Freelance & Startups",
+      "year": "2022 - Aujourd'hui",
+      "points": [
+        "Développement et maintenance d'applications web interactives avec React.js, Hooks et les fonctionnalités modernes de JavaScript",
+        "Création de fonctionnalités propulsées par l'IA avec intégration LLM (Groq, Gemini, Ollama, xAI)",
+        "Mise en place de mises en page responsives avec Tailwind CSS et styled-components",
+        "Optimisation des performances selon les bonnes pratiques React et le code splitting"
+      ]
+    },
+    "web": {
+      "title": "Développeur Web",
+      "company": "Agences & Entreprises diverses",
+      "year": "2020 - 2022",
+      "points": [
+        "Création de sites statiques et dynamiques pour des entreprises et organisations",
+        "Garantie de la compatibilité inter-navigateurs et du respect des normes d'accessibilité",
+        "Intégration d'API tierces (cartes, systèmes de réservation, paiements)",
+        "Maintenance continue, améliorations SEO et optimisation des performances"
+      ]
+    },
+    "trainer": {
+      "title": "Formateur & Expert IA dans l'Éducation",
+      "company": "Erasmus+: Smart Edu AI",
+      "year": "2022 - Présent",
+      "points": [
+        "Conception et animation de sessions de formation sur les outils IA et la pédagogie numérique",
+        "Création d'environnements d'apprentissage interactifs avec ChatGPT, Actionbound, Trello",
+        "Enseignement de la création de sites web de A à Z avec HTML/CSS/JS",
+        "Accompagnement des participants dans l'intégration d'outils IA pour l'engagement"
+      ]
+    }
+  },
+  "resumeEducation": {
+    "advanced": {
+      "title": "Développement Web Avancé & Intégration IA",
+      "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
+      "period": "2023 - Présent"
+    },
+    "diplomaWeb": {
+      "title": "Diplôme professionnel - Développement Web",
+      "institution": "École de code, France",
+      "period": "2020 - 2021"
+    },
+    "diplomaMarketing": {
+      "title": "Diplôme professionnel - Marketing Digital",
+      "institution": "France Education Institute",
+      "period": "2019 - 2020"
+    }
+  },
+  "cv": {
+    "download": "Télécharger mon CV (PDF)",
+    "languageLabel": "Langue du CV"
+  }
+}

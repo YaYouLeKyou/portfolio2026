@@ -6,17 +6,17 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useLanguage } from "../i18n/LanguageContext";
 
-// Service Card Component with Enhanced Animations
-const ServiceCard = ({ index, title, icon, isMobile }) => {
-  if (isMobile) {
+const ServiceCard = ({ index, title, icon, isMobile, isTablet }) => {
+  if (isMobile || isTablet) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.1, duration: 0.5 }}
         viewport={{ once: true }}
-        className="w-[250px] sm:w-[220px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:shadow-2xl transition-shadow duration-300"
+        className="w-full max-w-[260px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:shadow-2xl transition-shadow duration-300"
       >
         <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 min-h-[260px] flex justify-evenly items-center flex-col">
           <motion.img
@@ -54,7 +54,6 @@ const ServiceCard = ({ index, title, icon, isMobile }) => {
   );
 };
 
-// Animated Counter Component
 const CountUp = ({ end, duration = 2 }) => {
   const [count, setCount] = React.useState(0);
 
@@ -76,11 +75,10 @@ const CountUp = ({ end, duration = 2 }) => {
   return count;
 };
 
-// Stats Card Component
-const StatCard = ({ number, label, index, isMobile }) => {
-  if (isMobile) {
+const StatCard = ({ number, label, index, isMobile, isTablet }) => {
+  if (isMobile || isTablet) {
     return (
-      <div className="w-[250px] sm:w-[220px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <div className="w-full max-w-[260px] flex-shrink-0 green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div className="bg-tertiary rounded-[20px] py-4 sm:py-5 px-8 sm:px-12 flex justify-evenly items-center flex-col">
           <h3 className="text-4xl sm:text-5xl font-bold text-[#915EFF]">
             <CountUp end={number} duration={2} />
@@ -116,31 +114,29 @@ const StatCard = ({ number, label, index, isMobile }) => {
   );
 };
 
-// ServiceCards Section Component
 const ServiceCards = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
+  const { t } = useLanguage();
 
-  // Stats data
   const stats = [
-    { number: 4, label: "LLM Providers Integrated" },
-    { number: 10, label: "Job Platforms Scraped" },
-    { number: 2, label: "Agents Deployed" },
-    { number: 7, label: "Languages Integrated" },
+    { number: 4, label: t("serviceStats.llmProviders") },
+    { number: 10, label: t("serviceStats.jobPlatforms") },
+    { number: 2, label: t("serviceStats.agentsDeployed") },
+    { number: 7, label: t("serviceStats.languages") },
   ];
 
   return (
     <div>
-      {/* Service Cards */}
       <div className="mt-16 sm:mt-20 flex flex-wrap gap-6 sm:gap-10 justify-center">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} isMobile={isMobile} {...service} />
+          <ServiceCard key={service.key} index={index} isMobile={isMobile} isTablet={isTablet} title={t(`services.${service.key}`)} icon={service.icon} />
         ))}
       </div>
 
-      {/* Stats */}
       <div className="mt-16 sm:mt-20 flex flex-wrap gap-6 sm:gap-10 justify-center">
         {stats.map((stat, index) => (
-          <StatCard key={stat.label} index={index} isMobile={isMobile} {...stat} />
+          <StatCard key={stat.label} index={index} isMobile={isMobile} isTablet={isTablet} {...stat} />
         ))}
       </div>
     </div>

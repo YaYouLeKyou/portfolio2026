@@ -7,13 +7,14 @@ import { styles } from "../styles";
 import { github, websiteicon } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { useLanguage } from "../i18n/LanguageContext";
 
-const ProjectCard = memo(({ index, name, description, tags, image, source_code_link, web_link, isMobile }) => {
+const ProjectCard = memo(({ index, name, description, tags, image, source_code_link, web_link, isMobile, isTablet }) => {
   const CardContent = () => (
-    <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full overflow-hidden h-[480px] flex flex-col">
-      <div className={`relative w-full ${isMobile ? "h-[200px]" : "h-[230px]"} rounded-2xl overflow-hidden group flex-shrink-0`}>
+    <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full h-full flex flex-col">
+      <div className={`relative w-full ${isMobile ? "h-[160px]" : isTablet ? "h-[180px]" : "h-[230px]"} rounded-2xl overflow-hidden group flex-shrink-0`}>
+        <img src={image} alt={name} className="w-full h-full object-contain bg-black/20" />
                 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100">
           <div
             onClick={() => window.open(source_code_link, "_blank")}
@@ -29,7 +30,6 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
           </div>
         </div>
 
-        {/* Existing icons (top corners) */}
         <div className="absolute top-2 left-2 z-30">
           <div
             onClick={() => window.open(source_code_link, "_blank")}
@@ -49,24 +49,24 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
         </div>
       </div>
 
-       <div className="mt-4 sm:mt-5 flex-1 flex flex-col">
-         <h3 className={`text-white font-bold ${isMobile ? "text-[20px]" : "text-[24px]"}`}>{name}</h3>
-         <p className={`mt-2 text-secondary ${isMobile ? "text-[13px]" : "text-[14px]"}`}>{description}</p>
-       </div>
+       <div className="mt-3 sm:mt-4 flex-1 flex flex-col">
+          <h3 className={`text-white font-bold ${isMobile ? "text-[16px]" : isTablet ? "text-[18px]" : "text-[22px]"}`}>{name}</h3>
+          <p className={`mt-2 text-secondary ${isMobile ? "text-[11px]" : isTablet ? "text-[12px]" : "text-[13px]"} leading-[16px] sm:leading-[20px] overflow-hidden`} style={{display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical"}}>{description}</p>
+        </div>
 
-      <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 flex-shrink-0">
-        {tags.map((tag) => (
-          <p key={`${name}-${tag.name}`} className={`text-[12px] sm:text-[14px] ${tag.color}`}>
-            #{tag.name}
-          </p>
-        ))}
-      </div>
+        <div className="mt-auto flex flex-wrap gap-1.5 sm:gap-2 flex-shrink-0">
+          {tags.map((tag) => (
+            <p key={`${name}-${tag.name}`} className={`text-[10px] sm:text-[13px] leading-tight ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
     </div>
   );
 
-  if (isMobile) {
+  if (isMobile || isTablet) {
     return (
-      <div className="w-full sm:w-full">
+      <div className={`w-full ${isMobile ? "min-h-[360px]" : "min-h-[380px]"}`}>
         <CardContent />
       </div>
     );
@@ -78,7 +78,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full sm:w-[360px] min-h-[420px]"
+      className="w-full sm:w-full md:w-[340px] lg:w-[360px] min-h-[420px]"
     >
       <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400}>
         <CardContent />
@@ -87,34 +87,51 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
   );
 });
 
+const getProjectDescription = (project, t) => {
+  const keyMap = {
+    "Job Bridge": "job_bridge",
+    "Iwatch4u": "iwatch4u",
+    "Bot Poster TikTok - Histoires Sombres": "bot_poster_tiktok",
+    "Ecommerce": "ecommerce",
+    "React-movies": "react_movies",
+    "Demenagement Paris.com": "demenagement_paris",
+    "ABC Architecture": "abc_architecture",
+    "Smart Edu AI - Erasmus+": "smart_edu_ai",
+    "FCC": "fcc",
+    "YZA Music": "yza_music",
+    "My Universe": "my_universe"
+  };
+  const key = keyMap[project.name];
+  if (key) {
+    const translated = t(`projects.${key}.description`);
+    return translated !== `projects.${key}.description` ? translated : project.description;
+  }
+  return project.description;
+};
+
 const Works = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
   const [activeFilter, setActiveFilter] = useState("All");
+  const { t } = useLanguage();
 
-  // Get unique categories
   const categories = ["All", ...new Set(projects.map((p) => p.category || "Other"))];
 
-  // Filter projects - use Set to avoid duplicates in "All" view
   const filteredProjects = activeFilter === "All"
     ? [...new Map(projects.map(p => [p.name, p])).values()]
     : projects.filter((p) => (p.category || "Other") === activeFilter);
 
   return (
     <div>
-      {/* Section Title */}
       <div className="text-center sm:text-left">
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={styles.sectionSubText}>{t("works.sectionSubText")}</p>
+        <h2 className={styles.sectionHeadText}>{t("works.sectionHeadText")}</h2>
       </div>
 
-      {/* Intro Text */}
       <p className="mt-3 text-secondary text-[15px] sm:text-[17px] max-w-3xl leading-[26px] sm:leading-[30px] text-center sm:text-left">
-        Following projects showcase my skills and experience through real-world examples. Each project
-        is briefly described with links to code repositories and live demos. It reflects my ability to
-        solve complex problems, work with different technologies, and manage projects effectively.
+        {t("works.intro")}
       </p>
 
-      {/* Filter Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +155,6 @@ const Works = () => {
         ))}
       </motion.div>
 
-      {/* Project Cards */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeFilter}
@@ -150,7 +166,14 @@ const Works = () => {
         >
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
-              <ProjectCard key={`project-${index}`} index={index} {...project} isMobile={isMobile} />
+              <ProjectCard
+                key={`project-${index}`}
+                index={index}
+                {...project}
+                description={getProjectDescription(project, t)}
+                isMobile={isMobile}
+                isTablet={isTablet}
+              />
             ))
           ) : (
             <motion.div
@@ -158,7 +181,7 @@ const Works = () => {
               animate={{ opacity: 1 }}
               className="text-center text-secondary py-12"
             >
-              <p className="text-lg">No projects in this category yet.</p>
+              <p className="text-lg">{t("common.noProjects")}</p>
             </motion.div>
           )}
         </motion.div>

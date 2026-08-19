@@ -66,7 +66,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
 
   if (isMobile || isTablet) {
     return (
-      <div className={`w-full ${isMobile ? "min-h-[360px]" : "min-h-[380px]"}`}>
+      <div className={`w-full ${isMobile ? "h-[400px]" : "h-[420px]"}`}>
         <CardContent />
       </div>
     );
@@ -78,7 +78,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full sm:w-full md:w-[340px] lg:w-[360px] min-h-[420px]"
+      className="w-full sm:w-full md:w-[340px] lg:w-[360px] h-[420px]"
     >
       <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400}>
         <CardContent />

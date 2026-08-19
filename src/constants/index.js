@@ -30,7 +30,8 @@ import {
   fcc,
   yza,
   iwatch4u,
-  histoiresSombres
+  histoiresSombres,
+  streetweb
 } from "../assets";
 
 export const navLinks = [

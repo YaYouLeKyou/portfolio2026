@@ -254,6 +254,29 @@ const projects = [
     web_link: "https://www.facebook.com/profile.php?id=100068745384249"
   },
   {
+    name: "Streetweb",
+    description:
+      "Autonomous AI agent that monitors urban culture and news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Instagram and Facebook.",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "AI",
+    image: streetweb,
+    source_code_link: "https://github.com/YaYouLeKyou/streetweb",
+    web_link: "https://www.facebook.com/profile.php?id=100066352797107"
+  },
+  {
     name: "Bot Poster TikTok",
     description:
       "Automated Python bot that generates complete TikTok videos about dark stories, true crime, and micro-mysteries. AI pipeline: script generation via Groq, Henri voice synthesis, Flux cinematic images, and vertical 1080x1920 video editing with Ken Burns effect.",

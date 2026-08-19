@@ -206,6 +206,7 @@
     "job_bridge": "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
     "iwatch4u": "Autonomous AI agent that monitors AI & Tech news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Twitter/X, Facebook, Instagram, and Threads.",
     "bot_poster_tiktok": "Automated Python bot that generates complete TikTok videos about dark stories, true crime, and micro-mysteries. AI pipeline: script generation via Groq, Henri voice synthesis, Flux cinematic images, and vertical 1080x1920 video editing with Ken Burns effect.",
+    "streetweb": "Autonomous AI agent that monitors urban culture and news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Instagram and Facebook.",
     "ecommerce": "modern react e-commerce website using Next.js, with Sanity.io for content management and Stripe for secure payments. The site features a dynamic product catalog easy to maintain and scale.",
     "react_movies": "React-Movie is a React app that uses a movie API to let users search for films and get personalized recommendations, providing a fast and interactive way to discover new movies.",
     "demenagement_paris": "Website with an integrated volume calculator. Book your move with complete peace of mind. Get instant quotes and schedule your move online.",

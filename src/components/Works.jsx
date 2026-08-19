@@ -92,6 +92,7 @@ const getProjectDescription = (project, t) => {
     "Job Bridge": "job_bridge",
     "Iwatch4u": "iwatch4u",
     "Bot Poster TikTok": "bot_poster_tiktok",
+    "Streetweb": "streetweb",
     "Ecommerce": "ecommerce",
     "React-movies": "react_movies",
     "Demenagement Paris.com": "demenagement_paris",

@@ -38,6 +38,7 @@ import fcc from "./fcc.png";
 import yza from "./yza.png";
 import iwatch4u from "./iwatch4u-logo.png";
 import histoiresSombres from "./Histoires-sombres-logo.png";
+import streetweb from "./logo-streetweb.png";
 
 export {
   logo,
@@ -77,4 +78,5 @@ export {
   yza,
   iwatch4u,
   histoiresSombres,
+  streetweb,
 };

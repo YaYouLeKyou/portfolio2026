@@ -91,7 +91,7 @@ const getProjectDescription = (project, t) => {
   const keyMap = {
     "Job Bridge": "job_bridge",
     "Iwatch4u": "iwatch4u",
-    "Bot Poster TikTok - Histoires Sombres": "bot_poster_tiktok",
+    "Bot Poster TikTok": "bot_poster_tiktok",
     "Ecommerce": "ecommerce",
     "React-movies": "react_movies",
     "Demenagement Paris.com": "demenagement_paris",

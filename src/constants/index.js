@@ -254,7 +254,7 @@ const projects = [
     web_link: "https://www.facebook.com/profile.php?id=100068745384249"
   },
   {
-    name: "Bot Poster TikTok - Histoires Sombres",
+    name: "Bot Poster TikTok",
     description:
       "Automated Python bot that generates complete TikTok videos about dark stories, true crime, and micro-mysteries. AI pipeline: script generation via Groq, Henri voice synthesis, Flux cinematic images, and vertical 1080x1920 video editing with Ken Burns effect.",
     tags: [
@@ -348,7 +348,7 @@ const projects = [
   {
     name: "Demenagement Paris.com",
     description:
-      "Website with an integrated volume calculator. Book your move with complete peace of mind.",
+      "Website with an integrated volume calculator. Book your move with complete peace of mind. Get instant quotes and schedule your move online.",
     tags: [
       {
         name: "html",

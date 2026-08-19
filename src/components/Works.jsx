@@ -78,7 +78,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full sm:w-full md:w-[340px] lg:w-[360px] h-[420px]"
+      className="w-full sm:w-full md:w-[340px] lg:w-[360px] h-[460px]"
     >
       <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.02} transitionSpeed={400}>
         <CardContent />

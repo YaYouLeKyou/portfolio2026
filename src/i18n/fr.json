@@ -200,7 +200,7 @@
     "llmProviders": "Fournisseurs LLM intégrés",
     "jobPlatforms": "Plateformes d'emploi scrapées",
     "agentsDeployed": "Agents déployés",
-    "languages": "2 Langues intégrées"
+    "languages": "Langues intégrées"
   },
   "projects": {
     "job_bridge": "Application de recherche d'emploi propulsée par l'IA qui orchestre 4 fournisseurs de LLM (Groq, Gemini, Ollama, xAI) avec un système de fallback automatique, scrape des offres d'emploi sur LinkedIn/Indeed/Glassdoor/France Travail et utilise un cache Redis pour des performances optimales.",

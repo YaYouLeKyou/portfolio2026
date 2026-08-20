@@ -13,7 +13,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
   const CardContent = () => (
     <div className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full h-full flex flex-col">
       <div className={`relative w-full ${isMobile ? "h-[160px]" : isTablet ? "h-[180px]" : "h-[230px]"} rounded-2xl overflow-hidden group flex-shrink-0`}>
-        <img src={image} alt={name} className="w-full h-full object-contain bg-black/20" />
+        <img src={image} alt={name} className="w-full h-full object-contain bg-black/20" loading="lazy" decoding="async" />
                 
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100">
           <div

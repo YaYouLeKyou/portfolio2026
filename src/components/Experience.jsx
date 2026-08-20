@@ -12,7 +12,7 @@ import { textVariant } from "../utils/motion";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const Icon = ({ src, alt }) => (
-  <img src={src} alt={alt} className="object-contain w-[60%] h-[60%]" />
+  <img src={src} alt={alt} className="object-contain w-[60%] h-[60%]" loading="lazy" decoding="async" />
 );
 
 const MobileExperienceCard = ({ experience, t }) => (

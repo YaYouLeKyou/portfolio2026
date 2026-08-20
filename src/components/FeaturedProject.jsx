@@ -25,6 +25,8 @@ const FeaturedProject = () => {
               src={findmyworkai} 
               alt="Find my job AI" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute top-4 left-4 z-30">
               <a

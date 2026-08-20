@@ -59,17 +59,19 @@ const CountUp = ({ end, duration = 2 }) => {
 
   React.useEffect(() => {
     let start = 0;
-    const timer = setInterval(() => {
-      start += end / (duration * 60);
-      if (start < end) {
-        setCount(Math.floor(start));
-      } else {
-        setCount(end);
-        clearInterval(timer);
+    const startTime = performance.now();
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / (duration * 1000), 1);
+      start = Math.floor(progress * end);
+      setCount(start);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
-    }, 1000 / 60);
+    };
+    const rafId = requestAnimationFrame(animate);
 
-    return () => clearInterval(timer);
+    return () => cancelAnimationFrame(rafId);
   }, [end, duration]);
 
   return count;

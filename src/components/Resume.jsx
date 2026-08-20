@@ -13,11 +13,12 @@ const SkillBar = ({ name, percentage }) => (
     </div>
     <div className="w-full bg-tertiary rounded-full h-2 overflow-hidden">
       <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: `${percentage}%` }}
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="h-full bg-gradient-to-r from-[#915EFF] to-[#7c4dff]"
+        className="h-full bg-gradient-to-r from-[#915EFF] to-[#7c4dff] origin-left"
+        style={{ width: `${percentage}%` }}
       />
     </div>
   </div>

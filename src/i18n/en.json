@@ -179,23 +179,6 @@
     "liveDemo": "Live Demo",
     "viewSource": "View Source"
   },
-  "educationData": {
-    "advanced": {
-      "title": "Advanced Web Development & AI Integration",
-      "institution": "Self-taught & Online Courses (Udemy, Coursera)",
-      "period": "2023 - Present"
-    },
-    "diplomaWeb": {
-      "title": "Professional Diploma - Web Development",
-      "institution": "Coding School, France",
-      "period": "2020 - 2021"
-    },
-    "diplomaMarketing": {
-      "title": "Professional Diploma - Digital Marketing",
-      "institution": "France Education Institute",
-      "period": "2019 - 2020"
-    }
-  },
   "serviceStats": {
     "llmProviders": "LLM Providers Integrated",
     "jobPlatforms": "Job Platforms Scraped",
@@ -257,10 +240,10 @@
       "institution": "Self-taught & Online Courses (Udemy, Coursera)",
       "period": "2024 - Present"
     },
-    "diplomaWeb": {
-      "title": "Professional Diploma - Web Development",
-      "institution": "Coding School, France",
-      "period": "2022 - 2023"
+    "openclassrooms": {
+      "title": "Web Developer and Integrator",
+      "institution": "OpenClassrooms – Computer Science",
+      "period": "Jan 2022 – Feb 2023"
     },
     "certifications": {
       "title": "Google Certification - Digital Marketing / FreeCodeCamp Certification",

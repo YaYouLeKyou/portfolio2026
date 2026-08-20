@@ -70,7 +70,7 @@ const Resume = () => {
       year: "2024 - Present",
     },
     {
-      key: "diplomaWeb",
+      key: "openclassrooms",
       year: "2022 - 2023",
     },
     {

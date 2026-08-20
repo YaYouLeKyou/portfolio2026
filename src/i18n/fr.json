@@ -179,23 +179,6 @@
     "liveDemo": "Démo en ligne",
     "viewSource": "Voir le code source"
   },
-  "educationData": {
-    "advanced": {
-      "title": "Développement Web Avancé & Intégration IA",
-      "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
-      "period": "2023 - Présent"
-    },
-    "diplomaWeb": {
-      "title": "Diplôme professionnel - Développement Web",
-      "institution": "École de code, France",
-      "period": "2020 - 2021"
-    },
-    "diplomaMarketing": {
-      "title": "Diplôme professionnel - Marketing Digital",
-      "institution": "France Education Institute",
-      "period": "2019 - 2020"
-    }
-  },
   "serviceStats": {
     "llmProviders": "Fournisseurs LLM intégrés",
     "jobPlatforms": "Plateformes d'emploi scrapées",
@@ -257,10 +240,10 @@
       "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
       "period": "2024 - Présent"
     },
-    "diplomaWeb": {
-      "title": "Diplôme professionnel - Développement Web",
-      "institution": "École de code, France",
-      "period": "2022 - 2023"
+    "openclassrooms": {
+      "title": "Développeur intégrateur web",
+      "institution": "OpenClassrooms – Computer Science",
+      "period": "janv. 2022 – févr. 2023"
     },
     "certifications": {
       "title": "Certification Google - Marketing Digital / Certification FreeCodeCamp",

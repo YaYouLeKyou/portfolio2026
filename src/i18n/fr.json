@@ -255,17 +255,17 @@
     "advanced": {
       "title": "Développement Web Avancé & Intégration IA",
       "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
-      "period": "2023 - Présent"
+      "period": "2024 - Présent"
     },
     "diplomaWeb": {
       "title": "Diplôme professionnel - Développement Web",
       "institution": "École de code, France",
-      "period": "2020 - 2021"
+      "period": "2022 - 2023"
     },
-    "diplomaMarketing": {
-      "title": "Diplôme professionnel - Marketing Digital",
-      "institution": "France Education Institute",
-      "period": "2019 - 2020"
+    "certifications": {
+      "title": "Certification Google - Marketing Digital / Certification FreeCodeCamp",
+      "institution": "Data Visualization, JavaScript Algorithms and Data Structures, Front End Development Libraries, Responsive Web Design",
+      "period": "2018 - 2022"
     }
   },
   "cv": {

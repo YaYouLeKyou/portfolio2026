@@ -67,15 +67,15 @@ const Resume = () => {
   const education = [
     {
       key: "advanced",
-      year: "2023 - Present",
+      year: "2024 - Present",
     },
     {
       key: "diplomaWeb",
-      year: "2020 - 2021",
+      year: "2022 - 2023",
     },
     {
-      key: "diplomaMarketing",
-      year: "2019 - 2020",
+      key: "certifications",
+      year: "2018 - 2022",
     },
   ];
 

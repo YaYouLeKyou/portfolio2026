@@ -129,43 +129,6 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center gap-4'>
-          {/* Mobile Language Selector */}
-          <div className="relative">
-            <button
-              onClick={() => setShowLangMenu(!showLangMenu)}
-              className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300 flex items-center gap-1"
-              title={t("language.select")}
-            >
-              <FaGlobe size={16} />
-              <span className="text-[10px] font-medium uppercase">{language}</span>
-            </button>
-            {showLangMenu && (
-              <div className="absolute right-0 mt-2 w-28 bg-tertiary rounded-lg shadow-lg border border-secondary/20 overflow-hidden">
-                <button
-                  onClick={() => { switchLanguage("en"); setShowLangMenu(false); }}
-                  className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary/20 transition-colors ${language === "en" ? "text-[#915EFF] font-bold" : "text-white"}`}
-                >
-                  English
-                </button>
-                <button
-                  onClick={() => { switchLanguage("fr"); setShowLangMenu(false); }}
-                  className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary/20 transition-colors ${language === "fr" ? "text-[#915EFF] font-bold" : "text-white"}`}
-                >
-                  Français
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Mobile Dark Mode Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300"
-            title={isDarkMode ? t("nav.switchToLight") : t("nav.switchToDark")}
-          >
-            {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
-          
           <img
             src={toggle ? close : menu}
             alt='menu'
@@ -176,7 +139,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl flex-col items-end gap-4`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -194,6 +157,45 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            <div className="flex flex-col items-end gap-2 mt-2">
+              {/* Mobile Language Selector */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowLangMenu(!showLangMenu)}
+                  className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300 flex items-center gap-1"
+                  title={t("language.select")}
+                >
+                  <FaGlobe size={16} />
+                  <span className="text-[10px] font-medium uppercase">{language}</span>
+                </button>
+                {showLangMenu && (
+                  <div className="absolute right-0 mt-2 w-28 bg-tertiary rounded-lg shadow-lg border border-secondary/20 overflow-hidden">
+                    <button
+                      onClick={() => { switchLanguage("en"); setShowLangMenu(false); }}
+                      className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary/20 transition-colors ${language === "en" ? "text-[#915EFF] font-bold" : "text-white"}`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => { switchLanguage("fr"); setShowLangMenu(false); }}
+                      className={`w-full text-left px-3 py-2 text-xs hover:bg-secondary/20 transition-colors ${language === "fr" ? "text-[#915EFF] font-bold" : "text-white"}`}
+                    >
+                      Français
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Dark Mode Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300"
+                title={isDarkMode ? t("nav.switchToLight") : t("nav.switchToDark")}
+              >
+                {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
+              </button>
+            </div>
           </div>
         </div>
       </div>

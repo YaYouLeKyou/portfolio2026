@@ -238,10 +238,11 @@
     "advanced": {
       "title": "Développement Web Avancé & Intégration IA",
       "institution": "Autodidacte & Cours en ligne (Udemy, Coursera)",
-      "period": "2023 - Présent"
+      "period": "2023 - Présent",
+      "details": "Google Cloud Skills Boost : Google IA, machine learning et cloud. OpenAI : AI Foundations, Applied AI Foundations, Agents and Workflows. Anthropic Claude Code 101, manipulation de l'API, Model Context Protocol, Cookbook."
     },
     "openclassrooms": {
-      "title": "Développeur Web",
+      "title": "Développeur Web front end",
       "institution": "OpenClassrooms",
       "period": "2022 – 2023"
     },

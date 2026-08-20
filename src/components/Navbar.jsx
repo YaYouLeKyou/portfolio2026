@@ -153,6 +153,15 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center justify-between w-full">
+            {/* Mobile Dark Mode Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300"
+              title={isDarkMode ? t("nav.switchToLight") : t("nav.switchToDark")}
+            >
+              {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
+            </button>
+
             {/* Mobile Language Selector */}
             <div className="relative">
               <button
@@ -180,15 +189,6 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-
-            {/* Mobile Dark Mode Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-tertiary hover:bg-secondary/20 text-[#915EFF] hover:text-white transition-all duration-300"
-              title={isDarkMode ? t("nav.switchToLight") : t("nav.switchToDark")}
-            >
-              {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-            </button>
           </div>
 
           {toggle && (

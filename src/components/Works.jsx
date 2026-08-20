@@ -104,8 +104,8 @@ const getProjectDescription = (project, t) => {
   };
   const key = keyMap[project.name];
   if (key) {
-    const translated = t(`projects.${key}.description`);
-    return translated !== `projects.${key}.description` ? translated : project.description;
+    const translated = t(`projects.${key}`);
+    return translated !== `projects.${key}` ? translated : project.description;
   }
   return project.description;
 };

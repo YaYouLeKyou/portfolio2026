@@ -85,13 +85,13 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-8 sm:mt-12 flex items-center gap-4 text-sm text-secondary"
+              className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-sm text-secondary"
             >
               <div className="flex items-center gap-2">
                 <span className="text-[#915EFF]">✓</span>
                 <span>{t("hero.llmProviders")}</span>
               </div>
-              <div className="hidden sm:flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <span className="text-[#915EFF]">✓</span>
                 <span>{t("hero.projects")}</span>
               </div>

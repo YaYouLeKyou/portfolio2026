@@ -67,7 +67,7 @@ const Resume = () => {
   const education = [
     {
       key: "advanced",
-      year: "2024 - Present",
+      year: "2023 - Present",
     },
     {
       key: "openclassrooms",

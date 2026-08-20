@@ -128,7 +128,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className='sm:hidden flex flex-col items-center gap-2 w-full'>
+        <div className='sm:hidden flex flex-col items-start gap-2 w-full'>
           <div className='w-full flex justify-between items-center'>
             <Link
               to='/'
@@ -152,7 +152,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between w-full">
             {/* Mobile Language Selector */}
             <div className="relative">
               <button

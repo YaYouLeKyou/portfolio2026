@@ -247,8 +247,13 @@
       "period": "2022 – 2023",
       "details": "React/Vue.js. Full Stack certification with Node.js, Express, and MongoDB."
     },
-    "certifications": {
-      "title": "Google Certification - Digital Marketing / FreeCodeCamp Certification",
+    "google": {
+      "title": "Google Certification - Digital Marketing",
+      "institution": "Google",
+      "period": "2018 - 2022"
+    },
+    "freecodecamp": {
+      "title": "FreeCodeCamp Certification",
       "institution": "Data Visualization, JavaScript Algorithms and Data Structures, Front End Development Libraries, Responsive Web Design",
       "period": "2018 - 2022"
     }

@@ -74,11 +74,7 @@ const Resume = () => {
       year: "2022 - 2023",
     },
     {
-      key: "google",
-      year: "2018 - 2022",
-    },
-    {
-      key: "freecodecamp",
+      key: "certifications",
       year: "2018 - 2022",
     },
   ];

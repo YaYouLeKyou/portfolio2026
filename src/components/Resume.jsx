@@ -215,6 +215,9 @@ const Resume = () => {
                     <div>
                       <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.${edu.key}.title`)}</h4>
                       <p className="text-secondary text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.institution`)}</p>
+                      {t(`resumeEducation.${edu.key}.details`) !== `resumeEducation.${edu.key}.details` && (
+                        <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed whitespace-pre-line">{t(`resumeEducation.${edu.key}.details`)}</p>
+                      )}
                     </div>
                     <span className="text-green-500 font-bold text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.period`)}</span>
                   </div>

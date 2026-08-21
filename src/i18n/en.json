@@ -239,12 +239,13 @@
       "title": "Advanced Web Development & AI Integration",
       "institution": "Self-taught & Online Courses (Udemy, Coursera)",
       "period": "2023 - Present",
-      "details": "Google Cloud Skills Boost: Google AI, machine learning and cloud. OpenAI: AI Foundations, Applied AI Foundations, Agents and Workflows. Anthropic Claude Code 101, API manipulation, Model Context Protocol, Cookbook."
+      "details": "• Google Cloud Skills Boost: Google AI, machine learning and cloud.\n• OpenAI: AI Foundations, Applied AI Foundations, Agents and Workflows.\n• Anthropic Claude Code 101: API manipulation, Model Context Protocol, Cookbook."
     },
     "openclassrooms": {
       "title": "Web Developer front end",
       "institution": "OpenClassrooms",
-      "period": "2022 – 2023"
+      "period": "2022 – 2023",
+      "details": "React/Vue.js"
     },
     "certifications": {
       "title": "Google Certification - Digital Marketing / FreeCodeCamp Certification",

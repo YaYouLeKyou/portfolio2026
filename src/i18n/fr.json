@@ -247,11 +247,20 @@
       "period": "2022 – 2023",
       "details": "React/Vue.js. Certification Full Stack avec Node.js, Express et MongoDB."
     },
+    "wordpress": {
+      "title": "Certification WordPress",
+      "institution": "OpenClassrooms",
+      "period": "2018"
+    },
     "certifications": {
-      "title": "Certifications",
-      "institution": "Google / FreeCodeCamp",
-      "period": "2018 - 2022",
-      "details": "Certification Google - Marketing Digital\nCertification FreeCodeCamp - Data Visualization, JavaScript Algorithms and Data Structures, Front End Development Libraries, Responsive Web Design"
+      "google": {
+        "title": "Certification Google",
+        "details": "Marketing Digital"
+      },
+      "freecodecamp": {
+        "title": "Certification FreeCodeCamp",
+        "details": "Data Visualization, JavaScript Algorithms and Data Structures, Front End Development Libraries, Responsive Web Design"
+      }
     }
   },
   "cv": {

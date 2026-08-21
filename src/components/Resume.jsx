@@ -75,7 +75,23 @@ const Resume = () => {
     },
     {
       key: "certifications",
-      year: "2018 - 2022",
+      year: "2020 - 2022",
+      items: [
+        {
+          titleKey: "google",
+          institution: "",
+          detailsKey: "google.details"
+        },
+        {
+          titleKey: "freecodecamp",
+          institution: "",
+          detailsKey: "freecodecamp.details"
+        }
+      ]
+    },
+    {
+      key: "wordpress",
+      year: "2018",
     },
   ];
 
@@ -201,35 +217,57 @@ const Resume = () => {
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 flex items-center gap-2">
               <span className="text-[#915EFF]">🎓</span> {t("resume.education")}
             </h3>
-             <div className="space-y-3 sm:space-y-4">
-              {education.map((edu, idx) => (
-                <motion.div
-                  key={edu.key}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="bg-tertiary p-4 rounded-lg border-l-4 border-green-500"
-                >
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
-                    <div>
-                      {edu.key !== "certifications" && (
-                        <>
-                          <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.${edu.key}.title`)}</h4>
-                          <p className="text-secondary text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.institution`)}</p>
-                        </>
-                      )}
-                      {t(`resumeEducation.${edu.key}.details`) !== `resumeEducation.${edu.key}.details` && (
-                        <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed whitespace-pre-line">{t(`resumeEducation.${edu.key}.details`)}</p>
-                      )}
-                    </div>
-                    {edu.key !== "certifications" && (
-                      <span className="text-green-500 font-bold text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.period`)}</span>
+              <div className="space-y-3 sm:space-y-4">
+                {education.map((edu, idx) => (
+                  <motion.div
+                    key={edu.key}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-tertiary p-4 rounded-lg border-l-4 border-green-500"
+                  >
+                  <div>
+                    {edu.items ? (
+                      <div>
+                        <div className="flex flex-wrap items-start justify-between gap-2">
+                          <div>
+                            <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.certifications.${edu.items[0].titleKey}.title`)}</h4>
+                            {edu.items[0].institution && (
+                              <p className="text-secondary text-xs sm:text-sm">{edu.items[0].institution}</p>
+                            )}
+                          </div>
+                          <span className="text-green-500 font-bold text-xs sm:text-sm whitespace-nowrap">{edu.year}</span>
+                        </div>
+                        <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed whitespace-pre-line">{t(`resumeEducation.certifications.${edu.items[0].detailsKey}`)}</p>
+                        {edu.items[1] && (
+                          <div className="mt-3 pt-3 border-t border-secondary/20">
+                            <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.certifications.${edu.items[1].titleKey}.title`)}</h4>
+                            {edu.items[1].institution && (
+                              <p className="text-secondary text-xs sm:text-sm">{edu.items[1].institution}</p>
+                            )}
+                            <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed whitespace-pre-line">{t(`resumeEducation.certifications.${edu.items[1].detailsKey}`)}</p>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex flex-wrap items-start justify-between gap-2">
+                          <div>
+                            <h4 className="text-white font-bold text-sm sm:text-base">{t(`resumeEducation.${edu.key}.title`)}</h4>
+                            <p className="text-secondary text-xs sm:text-sm">{t(`resumeEducation.${edu.key}.institution`)}</p>
+                          </div>
+                          <span className="text-green-500 font-bold text-xs sm:text-sm whitespace-nowrap">{edu.year}</span>
+                        </div>
+                        {t(`resumeEducation.${edu.key}.details`) !== `resumeEducation.${edu.key}.details` && (
+                          <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed whitespace-pre-line">{t(`resumeEducation.${edu.key}.details`)}</p>
+                        )}
+                      </>
                     )}
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  </motion.div>
+                ))}
+              </div>
           </div>
         </motion.div>
       </div>

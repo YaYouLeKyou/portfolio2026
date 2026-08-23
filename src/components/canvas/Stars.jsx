@@ -2,13 +2,12 @@ import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import { useMediaQuery } from "react-responsive";
 
 const STAR_COUNT = 2000;
 
 const Stars = (props) => {
   const ref = useRef();
-  // Each point needs three values (x, y, z). A buffer of 5,000 values leaves
-  // the last point incomplete, causing Three.js to calculate a NaN bounding sphere.
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(STAR_COUNT * 3), { radius: 1.2 })
   );
@@ -34,6 +33,9 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  if (isMobile) return null;
+
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}>

@@ -20,13 +20,13 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
             onClick={() => window.open(source_code_link, "_blank")}
             className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
           >
-            <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
+            <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
           </div>
           <div
             onClick={() => window.open(web_link, "_blank")}
             className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
           >
-            <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" />
+            <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -35,7 +35,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
             onClick={() => window.open(source_code_link, "_blank")}
             className="black-gradient w-9 h-9 sm:w-10 sm:h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
           >
-            <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
+            <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const ProjectCard = memo(({ index, name, description, tags, image, source_code_l
             onClick={() => window.open(web_link, "_blank")}
             className="black-gradient w-9 h-9 sm:w-10 sm:h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
           >
-            <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" />
+            <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

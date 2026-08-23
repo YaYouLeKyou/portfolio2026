@@ -35,7 +35,7 @@ const FeaturedProject = () => {
                 rel="noopener noreferrer"
                 className="black-gradient w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center cursor-pointer"
               >
-                <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
+                <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
               </a>
             </div>
             <div className="absolute top-4 right-4 z-30">
@@ -45,7 +45,7 @@ const FeaturedProject = () => {
                 rel="noopener noreferrer"
                 className="black-gradient w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center cursor-pointer"
               >
-                <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" />
+                <img src={websiteicon} alt="visit website" className="w-1/2 h-1/2 object-contain" loading="lazy" decoding="async" />
               </a>
             </div>
           </div>

@@ -16,6 +16,7 @@ const Tech = () => {
             alt={technology.name}
             className="w-16 h-16 object-contain"
             loading="lazy"
+            decoding="async"
           />
         </div>
       ))}

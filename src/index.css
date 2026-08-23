@@ -16,6 +16,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+    overscroll-behavior-y: none;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -222,6 +229,7 @@ html {
 
   html {
     scroll-behavior: auto;
+    overscroll-behavior-y: none;
   }
 
   body {

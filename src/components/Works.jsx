@@ -119,7 +119,7 @@ const Works = () => {
   const categories = ["All", ...new Set(projects.map((p) => p.category || "Other"))];
 
   const filteredProjects = activeFilter === "All"
-    ? [...new Map(projects.map(p => [p.name, p])).values()]
+    ? projects
     : projects.filter((p) => (p.category || "Other") === activeFilter);
 
   return (

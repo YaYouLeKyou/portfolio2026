@@ -552,6 +552,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    category: "AI",
+    image: trueDetective,
+    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
+    web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
+  },
+  {
+    name: "True Detective",
+    description:
+      "True Detective",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      },
+    ],
     category: "Full-Stack",
     image: trueDetective,
     source_code_link: "https://github.com/YaYouLeKyou/drink-play",
@@ -598,6 +621,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    category: "AI",
+    image: drinkPlayJackpot,
+    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
+    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
+  },
+  {
+    name: "Drink & Play Jackpot",
+    description:
+      "Drink & Play Jackpot",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      },
+    ],
     category: "Full-Stack",
     image: drinkPlayJackpot,
     source_code_link: "https://github.com/YaYouLeKyou/drink-play",
@@ -644,6 +690,29 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    category: "AI",
+    image: iwatch4uZapping,
+    source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
+    web_link: "https://iwatch4you-zapping-website.vercel.app/"
+  },
+  {
+    name: "Zapping Iwatch4u",
+    description:
+      "Zapping Iwatch4u",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
     category: "Full-Stack",
     image: iwatch4uZapping,
     source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
@@ -671,6 +740,29 @@ const projects = [
     image: iwatch4uZapping,
     source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
     web_link: "https://iwatch4you-zapping-website.vercel.app/"
+  },
+  {
+    name: "Music Hit Maker",
+    description:
+      "Music Hit Maker",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "music",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: "AI",
+    image: musicHitMaker,
+    source_code_link: "https://github.com/YaYouLeKyou/hit-music-maker",
+    web_link: "https://hit-music-maker.vercel.app/"
   },
   {
     name: "Music Hit Maker",

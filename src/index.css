@@ -13,15 +13,29 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-  html {
-    scroll-behavior: auto;
-    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
-}
+
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: auto;
+      overscroll-behavior-y: none;
+    }
+  }
+
+  /* Smooth scroll easing for browsers that support it */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  /* Reduce repaints during scroll: keep fixed elements on their own layer */
+  nav, .navbar {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
 
 .hash-span {
   margin-top: -100px;

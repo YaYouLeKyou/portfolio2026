@@ -12,7 +12,7 @@ const offers = [
     details:
       "A 3 pages responsive website with a clean, modern design. Includes a homepage, about page, contact form, and gallery/portfolio section. Optimized for mobile and desktop, basic interactivity, and SEO-friendly structure.",
     price: "€250",
-    subscription: "+€20/month",
+    subscription: "+€20/month (optional maintenance)",
     subscriptionNote: "",
   },
   {
@@ -21,7 +21,7 @@ const offers = [
     details:
       "Up to 5 pages featuring dynamic content, optional API integrations or WordPress CMS. Includes blog setup, portfolio showcase, and SEO-ready structure. Perfect for growing businesses or professional portfolios.",
     price: "€450",
-    subscription: "+€30/month",
+    subscription: "+€30/month (optional maintenance)",
     subscriptionNote: "",
   },
   {
@@ -30,8 +30,26 @@ const offers = [
     details:
       "A fully custom website or app with advanced interactivity. Includes e-commerce, payment setup, user authentication, and dashboards. Ideal for startups or online stores.",
     price: "€750+",
-    subscription: "+€50+/month",
+    subscription: "+€50+/month (optional maintenance)",
     subscriptionNote: "(Price to be determined based on\nthe size of the project)",
+  },
+  {
+    key: "fcc",
+    title: "FCC",
+    details:
+      "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
+    price: "€400",
+    subscription: "+€25/month (optional maintenance)",
+    subscriptionNote: "",
+  },
+  {
+    key: "smart_edu_ai",
+    title: "Smart Edu AI - Erasmus+",
+    details:
+      "Blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence.",
+    price: "€500",
+    subscription: "+€30/month (optional maintenance)",
+    subscriptionNote: "",
   },
 ];
 
@@ -88,6 +106,12 @@ const Offers = () => {
           <p className={styles.sectionSubText}>{t("feedbacks.sectionSubText")}</p>
           <h2 className={`${styles.sectionHeadText} mb-8`}>{t("feedbacks.sectionHeadText")}</h2>
         </HeaderWrapper>
+      </div>
+
+      <div className={`mt-6 pb-4 ${styles.paddingX} text-center sm:text-left max-w-4xl mx-auto`}>
+        <p className="text-secondary text-[15px] sm:text-[17px] leading-[26px] sm:leading-[30px]">
+          {t("feedbacks.intro")}
+        </p>
       </div>
 
       <div

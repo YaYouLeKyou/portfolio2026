@@ -239,7 +239,7 @@ const projects = [
   {
     name: "Music Hit Maker",
     description:
-      "Music Hit Maker",
+      "AI-powered music generation platform that creates original hit songs using artificial intelligence. Features advanced audio synthesis, beat matching, and melody composition to produce professional-quality music tracks.",
     tags: [
       {
         name: "react",
@@ -262,7 +262,7 @@ const projects = [
   {
     name: "Zapping Iwatch4u",
     description:
-      "Zapping Iwatch4u",
+      "Autonomous AI agent that monitors AI & Tech news via RSS feeds, generates optimized posts via DeepSeek/OpenAI, and automatically publishes them on Twitter/X, Facebook, Instagram, and Threads.",
     tags: [
       {
         name: "react",
@@ -285,7 +285,7 @@ const projects = [
   {
     name: "True Detective",
     description:
-      "True Detective",
+      "Interactive AI-powered mystery game that generates dynamic detective stories and challenges. Players solve AI-generated cases with branching narratives and intelligent hint systems.",
     tags: [
       {
         name: "react",
@@ -561,7 +561,7 @@ const projects = [
   {
     name: "Drink & Play Jackpot",
     description:
-      "Drink & Play Jackpot",
+      "Interactive AI-powered gaming platform that combines social drinking games with intelligent jackpot systems. Features real-time multiplayer gameplay, AI-driven prize distribution, and dynamic game mechanics.",
     tags: [
       {
         name: "react",

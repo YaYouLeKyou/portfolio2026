@@ -14,7 +14,7 @@ const featuredProjects = [
     titleKey: "featuredProject.aiToolsShop.title",
     subtitleKey: "featuredProject.aiToolsShop.subtitle",
     descKey: "featuredProject.aiToolsShop.description",
-    github: "https://github.com/YaYouLeKyou/ai-tools-shop",
+    github: "https://github.com/YaYouLeKyou",
     web: "https://frontend-jet-delta-15.vercel.app/",
   },
   {

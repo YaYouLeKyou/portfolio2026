@@ -44,7 +44,7 @@ const OfferCard = ({ index, title, details, price, subscription, subscriptionNot
           <p className="text-secondary text-sm leading-relaxed text-left">{details}</p>
         </div>
         <div className="text-center mt-4 h-[76px] flex flex-col items-center">
-          <span className="text-white font-extrabold text-xl">{price}</span>
+          <span className="text-white font-extrabold text-xl">{price} <span className="text-xs font-medium text-secondary">H.T.</span></span>
           <p className="text-secondary text-xs mt-1">{subscription}</p>
           <p className="text-secondary text-[10px] mt-0.5 leading-tight whitespace-pre-line min-h-[2.5rem]">
             {subscriptionNote}

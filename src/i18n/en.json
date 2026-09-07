@@ -60,22 +60,23 @@
   "feedbacks": {
     "sectionSubText": "My Services",
     "sectionHeadText": "Web Development Offers.",
+    "taxNote": "Excluding tax",
     "starter": {
       "name": "Starter Website",
       "price": "€250",
-      "monthly": "+€20/month",
+      "monthly": "+€20/month (optional maintenance)",
       "description": "A 3 pages responsive website with a clean, modern design. Includes a homepage, about page, contact form, and gallery/portfolio section. Optimized for mobile and desktop, basic interactivity, and SEO-friendly structure."
     },
     "pro": {
       "name": "Pro Web Package",
       "price": "€450",
-      "monthly": "+€30/month",
+      "monthly": "+€30/month (optional maintenance)",
       "description": "Up to 5 pages featuring dynamic content, optional API integrations or WordPress CMS. Includes blog setup, portfolio showcase, and SEO-ready structure. Perfect for growing businesses or professional portfolios."
     },
     "full": {
       "name": "Full Web Experience",
       "price": "€750+",
-      "monthly": "+€50+/month",
+      "monthly": "+€50+/month (optional maintenance)",
       "description": "A fully custom website or app with advanced interactivity. Includes e-commerce, payment setup, user authentication, and dashboards. Ideal for startups or online stores.",
       "note": "(Price to be determined based on\nthe size of the project)"
     }

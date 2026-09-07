@@ -60,22 +60,23 @@
   "feedbacks": {
     "sectionSubText": "Mes Services",
     "sectionHeadText": "Offres de développement web.",
+    "taxNote": "Prix hors taxes",
     "starter": {
       "name": "Site web Débutant",
       "price": "€250",
-      "monthly": "+€20/mois",
+      "monthly": "+€20/mois (maintenance optionnelle)",
       "description": "Un site responsive de 3 pages avec un design propre et moderne. Comprend une page d'accueil, une page à propos, un formulaire de contact et une section galerie/portfolio. Optimisé pour mobile et desktop, avec une interactivité basique et une structure SEO-friendly."
     },
     "pro": {
       "name": "Pack Pro Web",
       "price": "€450",
-      "monthly": "+€30/mois",
+      "monthly": "+€30/mois (maintenance optionnelle)",
       "description": "Jusqu'à 5 pages avec contenu dynamique, intégrations API optionnelles ou CMS WordPress. Comprend la configuration d'un blog, un portfolio et une structure prête pour le SEO. Parfait pour les entreprises en croissance ou les portfolios professionnels."
     },
     "full": {
       "name": "Expérience Web Complète",
       "price": "€750+",
-      "monthly": "+€50+/mois",
+      "monthly": "+€50+/mois (maintenance optionnelle)",
       "description": "Un site web ou une application entièrement personnalisé avec une interactivité avancée. Comprend e-commerce, paiement, authentification utilisateur et tableaux de bord. Idéal pour les startups ou les boutiques en ligne.",
       "note": "(Prix à déterminer selon\nla taille du projet)"
     }

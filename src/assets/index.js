@@ -39,6 +39,10 @@ import yza from "./yza.png";
 import iwatch4u from "./banniere-iwatch4u.png";
 import histoiresSombres from "./Histoires-sombres-logo.png";
 import streetweb from "./baniere-streetweb.png";
+import trueDetective from "./true-detective.png";
+import drinkPlayJackpot from "./drink&play-jackpot.png";
+import iwatch4uZapping from "./i-watch4u.png";
+import musicHitMaker from "./music hit machine.png";
 
 export {
   logo,
@@ -79,4 +83,8 @@ export {
   iwatch4u,
   histoiresSombres,
   streetweb,
+  trueDetective,
+  drinkPlayJackpot,
+  iwatch4uZapping,
+  musicHitMaker,
 };

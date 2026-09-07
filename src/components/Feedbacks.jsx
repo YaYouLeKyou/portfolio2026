@@ -33,23 +33,20 @@ const offers = [
     subscription: "+€50+/month (optional maintenance)",
     subscriptionNote: "(Price to be determined based on\nthe size of the project)",
   },
+];
+
+const associationProjects = [
   {
     key: "fcc",
     title: "FCC",
     details:
       "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
-    price: "€400",
-    subscription: "+€25/month (optional maintenance)",
-    subscriptionNote: "",
   },
   {
     key: "smart_edu_ai",
     title: "Smart Edu AI - Erasmus+",
     details:
       "Blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence.",
-    price: "€500",
-    subscription: "+€30/month (optional maintenance)",
-    subscriptionNote: "",
   },
 ];
 
@@ -92,6 +89,27 @@ const OfferCard = ({ index, title, details, price, subscription, subscriptionNot
   );
 };
 
+const ProjectCard = ({ index, title, details, isMobile, isTablet }) => {
+  if (isMobile || isTablet) {
+    return (
+      <div className="bg-tertiary p-5 rounded-xl w-full min-h-[240px] flex flex-col">
+        <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
+        <p className="text-secondary text-sm leading-relaxed text-left flex-1">{details}</p>
+      </div>
+    );
+  }
+
+  return (
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.2, 0.6)}
+      className="bg-tertiary p-6 rounded-2xl w-[320px] min-h-[280px] shadow-lg flex flex-col"
+    >
+      <h3 className="text-white text-xl font-bold mb-4">{title}</h3>
+      <p className="text-secondary text-[13px] leading-relaxed text-left flex-1">{details}</p>
+    </motion.div>
+  );
+};
+
 const Offers = () => {
   const isMobile = useMediaQuery({ maxWidth: 749 });
   const isTablet = useMediaQuery({ minWidth: 750, maxWidth: 1024 });
@@ -114,30 +132,50 @@ const Offers = () => {
         </p>
       </div>
 
-      <div
-        className={`mt-8 pb-10 ${styles.paddingX} flex flex-col min-[750px]:flex-row gap-6 min-[750px]:gap-8 items-center min-[750px]:justify-center`}
-      >
-        {offers.map((offer, index) => {
-          const translatedName = t(`feedbacks.${offer.key}.name`);
-          const name = translatedName !== `feedbacks.${offer.key}.name` ? translatedName : offer.title;
-          const translatedDesc = t(`feedbacks.${offer.key}.description`);
-          const description = translatedDesc !== `feedbacks.${offer.key}.description` ? translatedDesc : offer.details;
+      <div className={`mt-8 pb-10 ${styles.paddingX} flex flex-col items-center gap-8`}>
+        <div className="flex flex-col min-[750px]:flex-row gap-6 min-[750px]:gap-8 items-center min-[750px]:justify-center">
+          {associationProjects.map((project, index) => {
+            const translatedName = t(`feedbacks.${project.key}.name`);
+            const name = translatedName !== `feedbacks.${project.key}.name` ? translatedName : project.title;
+            const translatedDesc = t(`feedbacks.${project.key}.description`);
+            const description = translatedDesc !== `feedbacks.${project.key}.description` ? translatedDesc : project.details;
 
-          return (
-            <OfferCard
-              key={offer.key}
-              index={index}
-              title={name}
-              details={description}
-              price={offer.price}
-              subscription={offer.subscription}
-              subscriptionNote={offer.subscriptionNote}
-              isMobile={isMobile}
-              isTablet={isTablet}
-              t={t}
-            />
-          );
-        })}
+            return (
+              <ProjectCard
+                key={project.key}
+                index={index}
+                title={name}
+                details={description}
+                isMobile={isMobile}
+                isTablet={isTablet}
+              />
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col min-[750px]:flex-row gap-6 min-[750px]:gap-8 items-center min-[750px]:justify-center">
+          {offers.map((offer, index) => {
+            const translatedName = t(`feedbacks.${offer.key}.name`);
+            const name = translatedName !== `feedbacks.${offer.key}.name` ? translatedName : offer.title;
+            const translatedDesc = t(`feedbacks.${offer.key}.description`);
+            const description = translatedDesc !== `feedbacks.${offer.key}.description` ? translatedDesc : offer.details;
+
+            return (
+              <OfferCard
+                key={offer.key}
+                index={index}
+                title={name}
+                details={description}
+                price={offer.price}
+                subscription={offer.subscription}
+                subscriptionNote={offer.subscriptionNote}
+                isMobile={isMobile}
+                isTablet={isTablet}
+                t={t}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -80,6 +80,14 @@
       "monthly": "+€50+/month (optional maintenance)",
       "description": "A fully custom website or app with advanced interactivity. Includes e-commerce, payment setup, user authentication, and dashboards. Ideal for startups or online stores.",
       "note": "(Price to be determined based on\nthe size of the project)"
+    },
+    "fcc": {
+      "name": "FCC",
+      "description": "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives."
+    },
+    "smart_edu_ai": {
+      "name": "Smart Edu AI - Erasmus+",
+      "description": "Blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence."
     }
   },
   "services": {

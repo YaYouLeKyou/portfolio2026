@@ -83,14 +83,10 @@
     },
     "fcc": {
       "name": "FCC",
-      "price": "€400",
-      "monthly": "+€25/mois (maintenance optionnelle)",
       "description": "Site web classique pour une ONG dédiée aux échanges culturels et à l'éducation. Il présente un design responsive, un support multilingue et présente des programmes et initiatives culturels."
     },
     "smart_edu_ai": {
       "name": "Smart Edu AI - Erasmus+",
-      "price": "€500",
-      "monthly": "+€30/mois (maintenance optionnelle)",
       "description": "Blog et plateforme éducative où j'ai servi d'expert IA, partageant des idées et des stratégies sur la transformation de l'éducation par l'intelligence artificielle."
     }
   },

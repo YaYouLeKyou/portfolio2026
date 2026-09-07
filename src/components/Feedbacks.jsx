@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useLanguage } from "../i18n/LanguageContext";
+import { fcc as fccImg, smartedu as smartEduImg } from "../assets";
 
 const offers = [
   {
@@ -41,12 +42,16 @@ const associationProjects = [
     title: "FCC",
     details:
       "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
+    image: fccImg,
+    link: "https://francecultureconnection.netlify.app/"
   },
   {
     key: "smart_edu_ai",
     title: "Smart Edu AI - Erasmus+",
     details:
       "Blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence.",
+    image: smartEduImg,
+    link: "https://smarteduai.netlify.app/"
   },
 ];
 
@@ -89,10 +94,13 @@ const OfferCard = ({ index, title, details, price, subscription, subscriptionNot
   );
 };
 
-const ProjectCard = ({ index, title, details, isMobile, isTablet }) => {
+const ProjectCard = ({ index, title, details, image, link, isMobile, isTablet }) => {
   if (isMobile || isTablet) {
     return (
       <div className="bg-tertiary p-5 rounded-xl w-full min-h-[240px] flex flex-col">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full h-[160px] rounded-xl overflow-hidden mb-3">
+          <img src={image} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
+        </a>
         <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
         <p className="text-secondary text-sm leading-relaxed text-left flex-1">{details}</p>
       </div>
@@ -104,6 +112,9 @@ const ProjectCard = ({ index, title, details, isMobile, isTablet }) => {
       variants={fadeIn("up", "spring", index * 0.2, 0.6)}
       className="bg-tertiary p-6 rounded-2xl w-[320px] min-h-[280px] shadow-lg flex flex-col"
     >
+      <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full h-[180px] rounded-xl overflow-hidden mb-4">
+        <img src={image} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async" />
+      </a>
       <h3 className="text-white text-xl font-bold mb-4">{title}</h3>
       <p className="text-secondary text-[13px] leading-relaxed text-left flex-1">{details}</p>
     </motion.div>
@@ -146,6 +157,8 @@ const Offers = () => {
                 index={index}
                 title={name}
                 details={description}
+                image={project.image}
+                link={project.link}
                 isMobile={isMobile}
                 isTablet={isTablet}
               />

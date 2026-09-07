@@ -282,29 +282,6 @@ const projects = [
     web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
   },
   {
-    name: "Drink & Play Jackpot",
-    description:
-      "Drink & Play Jackpot",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    categories: ["AI", "Full-Stack", "Web"],
-    image: drinkPlayJackpot,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
-  },
-  {
     name: "Job Bridge",
     description:
       "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
@@ -556,6 +533,29 @@ const projects = [
     image: yza,
     source_code_link: "https://github.com/YaYouLeKyou/YZA-Music-website",
     web_link: "https://yza.netlify.app/"
+  },
+  {
+    name: "Drink & Play Jackpot",
+    description:
+      "Drink & Play Jackpot",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: drinkPlayJackpot,
+    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
+    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
   },
   {
     name: "My Universe",

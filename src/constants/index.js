@@ -213,6 +213,98 @@ const testimonials = [
 ];
 const projects = [
   {
+    name: "Music Hit Maker",
+    description:
+      "Music Hit Maker",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "music",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: musicHitMaker,
+    source_code_link: "https://github.com/YaYouLeKyou/hit-music-maker",
+    web_link: "https://hit-music-maker.vercel.app/"
+  },
+  {
+    name: "Zapping Iwatch4u",
+    description:
+      "Zapping Iwatch4u",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "automation",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: iwatch4uZapping,
+    source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
+    web_link: "https://iwatch4you-zapping-website.vercel.app/"
+  },
+  {
+    name: "True Detective",
+    description:
+      "True Detective",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: trueDetective,
+    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
+    web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
+  },
+  {
+    name: "Drink & Play Jackpot",
+    description:
+      "Drink & Play Jackpot",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "game",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: drinkPlayJackpot,
+    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
+    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
+  },
+  {
     name: "Job Bridge",
     description:
       "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
@@ -230,7 +322,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "AI",
+    categories: ["AI"],
     image: findmyworkai,
     source_code_link: "https://github.com/YaYouLeKyou/find-my-job-ai-react",
     web_link: "https://find-my-job-ai-react.vercel.app/"
@@ -253,7 +345,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "AI",
+    categories: ["AI"],
     image: iwatch4u,
     source_code_link: "https://github.com/YaYouLeKyou/ia-tech-bot-poster-fb-insta-thread-twitter",
     web_link: "https://www.facebook.com/profile.php?id=100068745384249"
@@ -276,7 +368,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "AI",
+    categories: ["AI"],
     image: streetweb,
     source_code_link: "https://github.com/YaYouLeKyou/streetweb",
     web_link: "https://www.facebook.com/profile.php?id=100066352797107"
@@ -299,33 +391,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "AI",
+    categories: ["AI"],
     image: histoiresSombres,
     source_code_link: "https://github.com/YaYouLeKyou/bot-poster-tiktok-mystery",
     web_link: "https://github.com/YaYouLeKyou/bot-poster-tiktok-mystery"
-  },
-  {
-    name: "Job Bridge",
-    description:
-      "AI-powered job search application that orchestrates 4 LLM providers (Groq, Gemini, Ollama, xAI) with automatic fallback, scrapes job offers from LinkedIn/Indeed/Glassdoor/France Travail, and uses Redis caching for optimal performance.",
-    tags: [
-      {
-        name: "AI",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "LLM",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scraping",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: findmyworkai,
-    source_code_link: "https://github.com/YaYouLeKyou/find-my-job-ai-react",
-    web_link: "https://find-my-job-ai-react.vercel.app/"
   },
   {
     name: "Ecommerce",
@@ -345,7 +414,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Full-Stack",
+    categories: ["Full-Stack"],
     image: ecommerce,
     source_code_link: "https://github.com/YaYouLeKyou/e-commerce-custom-open-source",
     web_link: "https://ecommerce-jsm.netlify.app/"
@@ -368,7 +437,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Full-Stack",
+    categories: ["Full-Stack"],
     image: reactmovies,
     source_code_link: "https://github.com/YaYouLeKyou/react-starter",
     web_link: "https://react-movies-app-by-yayou.netlify.app/"
@@ -391,7 +460,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: carrent,
     source_code_link: "https://github.com/YaYouLeKyou/demenagement-paris.com",
     web_link: "https://demenagement-paris.netlify.app/"
@@ -414,7 +483,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: jobit,
     source_code_link: "https://github.com/YaYouLeKyou/abc-0.91",
     web_link: "https://abc-architecture.netlify.app/"
@@ -437,7 +506,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: smartedu,
     source_code_link: "https://github.com/YaYouLeKyou/smartedu",
     web_link: "https://smarteduai.netlify.app/"
@@ -460,7 +529,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: fcc,
     source_code_link: "https://github.com/YaYouLeKyou/France-culture-connection2",
     web_link: "https://francecultureconnection.netlify.app/"
@@ -483,7 +552,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: yza,
     source_code_link: "https://github.com/YaYouLeKyou/YZA-Music-website",
     web_link: "https://yza.netlify.app/"
@@ -506,311 +575,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: "Web",
+    categories: ["Web"],
     image: tripguide,
     source_code_link: "https://github.com/YaYouLeKyou",
     web_link: "https://projectsportefolio.netlify.app/projects"
-  },
-  {
-    name: "My Universe",
-    description:
-      "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "portfolio",
-        color: "green-text-gradient",
-      },
-      {
-        name: "showcase",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: tripguide,
-    source_code_link: "https://github.com/YaYouLeKyou",
-    web_link: "https://projectsportefolio.netlify.app/projects"
-  },
-  {
-    name: "True Detective",
-    description:
-      "True Detective",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "AI",
-    image: trueDetective,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
-  },
-  {
-    name: "True Detective",
-    description:
-      "True Detective",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: trueDetective,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
-  },
-  {
-    name: "True Detective",
-    description:
-      "True Detective",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Web",
-    image: trueDetective,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/true-detective/index.html"
-  },
-  {
-    name: "Drink & Play Jackpot",
-    description:
-      "Drink & Play Jackpot",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "AI",
-    image: drinkPlayJackpot,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
-  },
-  {
-    name: "Drink & Play Jackpot",
-    description:
-      "Drink & Play Jackpot",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: drinkPlayJackpot,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
-  },
-  {
-    name: "Drink & Play Jackpot",
-    description:
-      "Drink & Play Jackpot",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "game",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Web",
-    image: drinkPlayJackpot,
-    source_code_link: "https://github.com/YaYouLeKyou/drink-play",
-    web_link: "https://yayoulekyou.github.io/drink-play/jackpot/index.html"
-  },
-  {
-    name: "Zapping Iwatch4u",
-    description:
-      "Zapping Iwatch4u",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "automation",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "AI",
-    image: iwatch4uZapping,
-    source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
-    web_link: "https://iwatch4you-zapping-website.vercel.app/"
-  },
-  {
-    name: "Zapping Iwatch4u",
-    description:
-      "Zapping Iwatch4u",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "automation",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: iwatch4uZapping,
-    source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
-    web_link: "https://iwatch4you-zapping-website.vercel.app/"
-  },
-  {
-    name: "Zapping Iwatch4u",
-    description:
-      "Zapping Iwatch4u",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "automation",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Web",
-    image: iwatch4uZapping,
-    source_code_link: "https://github.com/YaYouLeKyou/iwatch4you-zapping-website",
-    web_link: "https://iwatch4you-zapping-website.vercel.app/"
-  },
-  {
-    name: "Music Hit Maker",
-    description:
-      "Music Hit Maker",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "music",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "AI",
-    image: musicHitMaker,
-    source_code_link: "https://github.com/YaYouLeKyou/hit-music-maker",
-    web_link: "https://hit-music-maker.vercel.app/"
-  },
-  {
-    name: "Music Hit Maker",
-    description:
-      "Music Hit Maker",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "music",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Full-Stack",
-    image: musicHitMaker,
-    source_code_link: "https://github.com/YaYouLeKyou/hit-music-maker",
-    web_link: "https://hit-music-maker.vercel.app/"
-  },
-  {
-    name: "Music Hit Maker",
-    description:
-      "Music Hit Maker",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "music",
-        color: "pink-text-gradient",
-      },
-    ],
-    category: "Web",
-    image: musicHitMaker,
-    source_code_link: "https://github.com/YaYouLeKyou/hit-music-maker",
-    web_link: "https://hit-music-maker.vercel.app/"
   }
-
 ];
 
 export { services, technologies, experiences, testimonials, projects };

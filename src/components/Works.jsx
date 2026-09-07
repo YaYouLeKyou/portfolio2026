@@ -116,11 +116,11 @@ const Works = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const { t } = useLanguage();
 
-  const categories = ["All", ...new Set(projects.map((p) => p.category || "Other"))];
+  const categories = ["All", ...new Set(projects.flatMap((p) => p.categories || ["Other"]))];
 
   const filteredProjects = activeFilter === "All"
     ? projects
-    : projects.filter((p) => (p.category || "Other") === activeFilter);
+    : projects.filter((p) => (p.categories || ["Other"]).includes(activeFilter));
 
   return (
     <div>

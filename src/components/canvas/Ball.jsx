@@ -7,8 +7,10 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 import CanvasLoader from "../Loader";
+import useVisible from "../../hooks/useVisible";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -38,20 +40,30 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true, alpha: true, antialias: true }}
-      style={{ background: "transparent" }}
-    >
-      <Suspense fallback={null}>
-        <color attach="background" args={["#000000"]} />
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [containerRef, isVisible] = useVisible("200px");
 
-      <Preload all />
-    </Canvas>
+  return (
+    <div ref={containerRef} className="w-full h-full">
+      <Canvas
+        dpr={isMobile ? [1, 1.5] : [1, 2]}
+        frameloop={isVisible ? "always" : "never"}
+        gl={{
+          alpha: true,
+          antialias: !isMobile,
+          powerPreference: "high-performance",
+        }}
+        style={{ background: "transparent" }}
+      >
+        <Suspense fallback={null}>
+          <color attach="background" args={["#000000"]} />
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
+
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 

@@ -87,11 +87,11 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2">
                 <span className="text-[#915EFF]">✓</span>
-                <span>4+ LLM Providers</span>
+                <span>All LLM providers</span>
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <span className="text-[#915EFF]">✓</span>
-                <span>10+ Projects</span>
+                <span>+50 projects on line</span>
               </div>
             </motion.div>
           </div>

@@ -172,8 +172,13 @@
     }
   },
   "featuredProject": {
-    "sectionSubText": "Featured Project",
-    "title": "Find my job AI",
+    "sectionSubText": "Featured Projects",
+    "title": "My Flagship Projects",
+    "aiToolsShop": {
+      "title": "AI Tools Shop",
+      "subtitle": "AI-Powered E-Commerce",
+      "description": "AI-powered e-commerce that autonomously generates a new innovative product every day. Designed to revolutionize online selling with integrated AI tools."
+    },
     "subtitle": "Intelligent Job Search Assistant",
     "description": "AI-powered application that revolutionizes job searching by analyzing CVs, ranking job offers across 10+ platforms, and generating personalized cover letters. Built with modern technologies and deployed in production.",
     "keyFeatures": "Key Features",
@@ -207,6 +212,7 @@
     "smart_edu_ai": "Smart Edu AI is a blog and educational platform where I served as an AI expert, sharing insights and strategies on transforming education with artificial intelligence.",
     "fcc": "Classic website for an NGO dedicated to cultural exchange and education. Features responsive design, multilingual support, and showcases cultural programs and initiatives.",
     "yza_music": "A locomotive.js website for a music band featuring a custom music player, smooth scrolling animations, and immersive visual design. Showcases the band's music, videos, and artistic identity.",
+    "ai_tools_shop": "AI-powered e-commerce that autonomously generates a new innovative product every day. Designed to revolutionize online selling with integrated AI tools.",
     "my_universe": "Explore a medley of my previous projects—ranging from sleek business websites to creative apps and AI-enhanced educational platforms. Each one reflects a unique blend of design, functionality, and purpose."
   },
   "resumeExperience": {

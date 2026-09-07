@@ -43,6 +43,7 @@ import trueDetective from "./true-detective.png";
 import drinkPlayJackpot from "./drink&play-jackpot.png";
 import iwatch4uZapping from "./i-watch4u.png";
 import musicHitMaker from "./music hit machine.png";
+import aiToolsShop from "./AI tools shop.png";
 
 export {
   logo,
@@ -87,4 +88,5 @@ export {
   drinkPlayJackpot,
   iwatch4uZapping,
   musicHitMaker,
+  aiToolsShop,
 };

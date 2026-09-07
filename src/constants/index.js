@@ -35,7 +35,8 @@ import {
   trueDetective,
   drinkPlayJackpot,
   iwatch4uZapping,
-  musicHitMaker
+  musicHitMaker,
+  aiToolsShop
 } from "../assets";
 
 export const navLinks = [
@@ -212,6 +213,29 @@ const testimonials = [
   },
 ];
 const projects = [
+  {
+    name: "AI Tools Shop",
+    description:
+      "E-commerce surboosté par l'IA qui produit en autonomie un nouveau produit innovant chaque jour. Conçu pour révolutionner la vente en ligne avec des outils IA intégrés.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "e-commerce",
+        color: "pink-text-gradient",
+      },
+    ],
+    categories: ["AI", "Full-Stack", "Web"],
+    image: aiToolsShop,
+    source_code_link: "https://github.com/YaYouLeKyou/ai-tools-shop",
+    web_link: "https://frontend-jet-delta-15.vercel.app/"
+  },
   {
     name: "Music Hit Maker",
     description:

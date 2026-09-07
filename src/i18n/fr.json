@@ -173,7 +173,12 @@
   },
   "featuredProject": {
     "sectionSubText": "Projet vedette",
-    "title": "Find my job AI",
+    "title": "Mes Projets Phares",
+    "aiToolsShop": {
+      "title": "AI Tools Shop",
+      "subtitle": "E-commerce surboosté par l'IA",
+      "description": "E-commerce surboosté par l'IA qui produit en autonomie un nouveau produit innovant chaque jour. Conçu pour révolutionner la vente en ligne avec des outils IA intégrés."
+    },
     "subtitle": "Assistant intelligent de recherche d'emploi",
     "description": "Application propulsée par l'IA qui révolutionne la recherche d'emploi en analysant les CV, en classant les offres sur plus de 10 plateformes et en générant des lettres de motivation personnalisées. Construite avec des technologies modernes et déployée en production.",
     "keyFeatures": "Fonctionnalités clés",
@@ -207,6 +212,7 @@
     "smart_edu_ai": "Smart Edu AI est un blog et une plateforme éducative où j'ai servi d'expert IA, partageant des idées et des stratégies sur la transformation de l'éducation par l'intelligence artificielle.",
     "fcc": "Site web classique pour une ONG dédiée aux échanges culturels et à l'éducation. Il présente un design responsive, un support multilingue et présente des programmes et initiatives culturels.",
     "yza_music": "Un site web locomotive.js pour un groupe de musique avec un lecteur de musique personnalisé, des animations de défilement fluides et un design visuel immersif. Présente la musique, les vidéos et l'identité artistique du groupe.",
+    "ai_tools_shop": "E-commerce surboosté par l'IA qui produit en autonomie un nouveau produit innovant chaque jour. Conçu pour révolutionner la vente en ligne avec des outils IA intégrés.",
     "my_universe": "Explorez un mélange de mes projets précédents — allant de sites web professionnels élégants à des applications créatives et des plateformes éducatives améliorées par l'IA. Chacun reflète un mélange unique de design, de fonctionnalité et de finalité."
   },
   "resumeExperience": {

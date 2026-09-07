@@ -100,6 +100,7 @@ const getProjectDescription = (project, t) => {
     "Smart Edu AI - Erasmus+": "smart_edu_ai",
     "FCC": "fcc",
     "YZA Music": "yza_music",
+    "AI Tools Shop": "ai_tools_shop",
     "My Universe": "my_universe"
   };
   const key = keyMap[project.name];

@@ -35,7 +35,7 @@ import smartedu from "./smartedu.png";
 import findmyworkai from "./findMyWork.png";
 import websiteicon from "./websiteicon.png";
 import fcc from "./fcc.png";
-import yza from "./yza.png";
+import yza from "./YZA.png";
 import iwatch4u from "./banniere-iwatch4u.png";
 import histoiresSombres from "./Histoires-sombres-logo.png";
 import streetweb from "./baniere-streetweb.png";

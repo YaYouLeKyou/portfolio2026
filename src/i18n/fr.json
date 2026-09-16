@@ -25,7 +25,7 @@
   "about": {
     "sectionSubText": "Introduction",
     "sectionHeadText": "À propos de moi",
-    "description": "Développeur Full-Stack spécialisé dans l'intégration LLM, le web scraping et le déploiement en production. Je conçois des applications intelligentes qui résolvent des problèmes concrets. Mon dernier projet, Find my job AI, orchestre 4 fournisseurs de LLM (Groq, Gemini, Ollama, xAI) avec un système de fallback automatique, scrape des offres d'emploi sur LinkedIn/Indeed/Glassdoor/France Travail et utilise un cache Redis pour des performances optimales."
+    "description": "Développeur Full-Stack spécialisé dans l'intégration LLM, le web scraping et le déploiement en production. Je conçois des applications intelligentes qui résolvent des problèmes concrets. Mes projets incluent Find my job AI (orchestration multi-LLM, scraping d'offres d'emploi), AI Tools Shop (e-commerce autonome), Smart Edu AI (plateforme éducative Erasmus+), ainsi que des agents IA autonomes pour la publication sur les réseaux sociaux."
   },
   "experience": {
     "sectionSubText": "Ce que j'ai accompli jusqu'à présent",
